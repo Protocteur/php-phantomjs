@@ -6,15 +6,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace JonnyW\PhantomJs\Tests\Unit\Procedure;
+namespace neokyuubi\PhantomJs\Tests\Unit\Procedure;
 
-use JonnyW\PhantomJs\Procedure\ProcedureFactoryInterface;
-use JonnyW\PhantomJs\Procedure\ProcedureLoaderFactory;
+use neokyuubi\PhantomJs\Procedure\ProcedureFactoryInterface;
+use neokyuubi\PhantomJs\Procedure\ProcedureLoaderFactory;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@neokyuubi.me>
  */
 class ProcedureLoaderFactoryTest extends \PHPUnit_Framework_TestCase
 {
@@ -60,7 +60,7 @@ class ProcedureLoaderFactoryTest extends \PHPUnit_Framework_TestCase
         $procedureLoaderFactory = $this->getProcedureLoaderFactory($procedureFactory);
         $procedureLoader = $procedureLoaderFactory->createProcedureLoader($this->directory);
 
-        $this->assertInstanceOf('\JonnyW\PhantomJs\Procedure\ProcedureLoaderInterface', $procedureLoader);
+        $this->assertInstanceOf('\neokyuubi\PhantomJs\Procedure\ProcedureLoaderInterface', $procedureLoader);
     }
 
 /** +++++++++++++++++++++++++++++++++++ **/
@@ -71,8 +71,8 @@ class ProcedureLoaderFactoryTest extends \PHPUnit_Framework_TestCase
      * Get procedure loader factory instance.
      *
      * @access public
-     * @param  \JonnyW\PhantomJs\Procedure\ProcedureFactoryInterface $procedureFactory
-     * @return \JonnyW\PhantomJs\Procedure\ProcedureLoaderFactory
+     * @param  \neokyuubi\PhantomJs\Procedure\ProcedureFactoryInterface $procedureFactory
+     * @return \neokyuubi\PhantomJs\Procedure\ProcedureLoaderFactory
      */
     protected function getProcedureLoaderFactory(ProcedureFactoryInterface $procedureFactory)
     {
@@ -89,11 +89,11 @@ class ProcedureLoaderFactoryTest extends \PHPUnit_Framework_TestCase
      * Get procedure factory.
      *
      * @access protected
-     * @return \JonnyW\PhantomJs\Procedure\ProcedureFactoryInterface
+     * @return \neokyuubi\PhantomJs\Procedure\ProcedureFactoryInterface
      */
     protected function getProcedureFactory()
     {
-        $procedureFactory = $this->getMock('\JonnyW\PhantomJs\Procedure\ProcedureFactoryInterface');
+        $procedureFactory = $this->getMock('\neokyuubi\PhantomJs\Procedure\ProcedureFactoryInterface');
 
         return $procedureFactory;
     }

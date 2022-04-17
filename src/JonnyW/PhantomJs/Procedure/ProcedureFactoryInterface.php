@@ -7,12 +7,12 @@
  * file that was distributed with this source code.
  */
 
-namespace JonnyW\PhantomJs\Procedure;
+namespace neokyuubi\PhantomJs\Procedure;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@neokyuubi.me>
  */
 interface ProcedureFactoryInterface
 {
@@ -20,7 +20,7 @@ interface ProcedureFactoryInterface
      * Create new procedure instance.
      *
      * @access public
-     * @return \JonnyW\PhantomJs\Procedure\ProcedureInterface
+     * @return \neokyuubi\PhantomJs\Procedure\ProcedureInterface
      */
     public function createProcedure();
 }

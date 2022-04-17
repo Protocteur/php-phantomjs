@@ -7,14 +7,14 @@
  * file that was distributed with this source code.
  */
 
-namespace JonnyW\PhantomJs\Http;
+namespace neokyuubi\PhantomJs\Http;
 
-use JonnyW\PhantomJs\Exception\NotWritableException;
+use neokyuubi\PhantomJs\Exception\NotWritableException;
 
 /**
  * PHP PhantomJs.
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@neokyuubi.me>
  */
 class CaptureRequest extends AbstractRequest
     implements CaptureRequestInterface
@@ -82,7 +82,7 @@ class CaptureRequest extends AbstractRequest
      * @param string $method  (default: RequestInterface::METHOD_GET)
      * @param int    $timeout (default: 5000)
      *
-     * @return \JonnyW\PhantomJs\Http\CaptureRequest
+     * @return \neokyuubi\PhantomJs\Http\CaptureRequest
      */
     public function __construct($url = null, $method = RequestInterface::METHOD_GET, $timeout = 5000)
     {
@@ -115,7 +115,7 @@ class CaptureRequest extends AbstractRequest
      *
      * @param string $type
      *
-     * @return \JonnyW\PhantomJs\Http\AbstractRequest
+     * @return \neokyuubi\PhantomJs\Http\AbstractRequest
      */
     public function setType($type)
     {
@@ -132,7 +132,7 @@ class CaptureRequest extends AbstractRequest
      * @param int $top    (default: 0)
      * @param int $left   (default: 0)
      *
-     * @return \JonnyW\PhantomJs\Http\AbstractRequest
+     * @return \neokyuubi\PhantomJs\Http\AbstractRequest
      */
     public function setCaptureDimensions($width, $height, $top = 0, $left = 0)
     {
@@ -189,9 +189,9 @@ class CaptureRequest extends AbstractRequest
      *
      * @param string $file
      *
-     * @throws \JonnyW\PhantomJs\Exception\NotWritableException
+     * @throws \neokyuubi\PhantomJs\Exception\NotWritableException
      *
-     * @return \JonnyW\PhantomJs\Http\CaptureRequest
+     * @return \neokyuubi\PhantomJs\Http\CaptureRequest
      */
     public function setOutputFile($file)
     {

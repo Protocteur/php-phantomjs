@@ -7,15 +7,15 @@
  * file that was distributed with this source code.
  */
 
-namespace JonnyW\PhantomJs\Http;
+namespace neokyuubi\PhantomJs\Http;
 
-use JonnyW\PhantomJs\Exception\InvalidMethodException;
-use JonnyW\PhantomJs\Procedure\InputInterface;
+use neokyuubi\PhantomJs\Exception\InvalidMethodException;
+use neokyuubi\PhantomJs\Procedure\InputInterface;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@neokyuubi.me>
  */
 abstract class AbstractRequest
     implements RequestInterface, InputInterface
@@ -144,13 +144,13 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  string                                             $method
-     * @return \JonnyW\PhantomJs\Http\AbstractRequest
-     * @throws \JonnyW\PhantomJs\Exception\InvalidMethodException
+     * @return \neokyuubi\PhantomJs\Http\AbstractRequest
+     * @throws \neokyuubi\PhantomJs\Exception\InvalidMethodException
      */
     public function setMethod($method)
     {
         $method     = strtoupper($method);
-        $reflection = new \ReflectionClass('\JonnyW\PhantomJs\Http\RequestInterface');
+        $reflection = new \ReflectionClass('\neokyuubi\PhantomJs\Http\RequestInterface');
 
         if (!$reflection->hasConstant('METHOD_' . $method)) {
             throw new InvalidMethodException(sprintf('Invalid method provided: %s', $method));
@@ -177,7 +177,7 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  int                                    $timeout
-     * @return \JonnyW\PhantomJs\Http\AbstractRequest
+     * @return \neokyuubi\PhantomJs\Http\AbstractRequest
      */
     public function setTimeout($timeout)
     {
@@ -206,7 +206,7 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  int                                    $delay
-     * @return \JonnyW\PhantomJs\Http\AbstractRequest
+     * @return \neokyuubi\PhantomJs\Http\AbstractRequest
      */
     public function setDelay($delay)
     {
@@ -269,7 +269,7 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  string                                 $url
-     * @return \JonnyW\PhantomJs\Http\AbstractRequest
+     * @return \neokyuubi\PhantomJs\Http\AbstractRequest
      */
     public function setUrl($url)
     {
@@ -324,7 +324,7 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  array                                  $data
-     * @return \JonnyW\PhantomJs\Http\AbstractRequest
+     * @return \neokyuubi\PhantomJs\Http\AbstractRequest
      */
     public function setRequestData(array $data)
     {
@@ -354,7 +354,7 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  array                                  $headers
-     * @return \JonnyW\PhantomJs\Http\AbstractRequest
+     * @return \neokyuubi\PhantomJs\Http\AbstractRequest
      */
     public function setHeaders(array $headers)
     {
@@ -367,7 +367,7 @@ abstract class AbstractRequest
      * @access public
      * @param  string                                 $header
      * @param  string                                 $value
-     * @return \JonnyW\PhantomJs\Http\AbstractRequest
+     * @return \neokyuubi\PhantomJs\Http\AbstractRequest
      */
     public function addHeader($header, $value)
     {
@@ -381,7 +381,7 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  array                                  $headers
-     * @return \JonnyW\PhantomJs\Http\AbstractRequest
+     * @return \neokyuubi\PhantomJs\Http\AbstractRequest
      */
     public function addHeaders(array $headers)
     {
@@ -412,7 +412,7 @@ abstract class AbstractRequest
      * @access public
      * @param  string                                 $setting
      * @param  string                                 $value
-     * @return \JonnyW\PhantomJs\Http\AbstractRequest
+     * @return \neokyuubi\PhantomJs\Http\AbstractRequest
      */
     public function addSetting($setting, $value)
     {
@@ -443,7 +443,7 @@ abstract class AbstractRequest
      * @param  bool                                   $httpOnly (default: true)
      * @param  bool                                   $secure   (default: false)
      * @param  int                                    $expires  (default: null)
-     * @return \JonnyW\PhantomJs\Http\AbstractRequest
+     * @return \neokyuubi\PhantomJs\Http\AbstractRequest
      */
     public function addCookie($name, $value, $path, $domain, $httpOnly = true, $secure = false, $expires = null)
     {
@@ -469,7 +469,7 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  string                                 $name
-     * @return \JonnyW\PhantomJs\Http\AbstractRequest
+     * @return \neokyuubi\PhantomJs\Http\AbstractRequest
      */
     public function deleteCookie($name)
     {
@@ -494,7 +494,7 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  array                                  $styles
-     * @return \JonnyW\PhantomJs\Http\AbstractRequest
+     * @return \neokyuubi\PhantomJs\Http\AbstractRequest
      */
     public function setBodyStyles(array $styles)
     {

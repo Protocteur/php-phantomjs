@@ -6,14 +6,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace JonnyW\PhantomJs\Tests\Unit;
+namespace neokyuubi\PhantomJs\Tests\Unit;
 
-use JonnyW\PhantomJs\StringUtils;
+use neokyuubi\PhantomJs\StringUtils;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@neokyuubi.me>
  */
 class StringUtilsTest extends \PHPUnit_Framework_TestCase
 {

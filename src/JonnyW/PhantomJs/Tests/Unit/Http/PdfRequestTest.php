@@ -6,15 +6,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace JonnyW\PhantomJs\Tests\Unit\Http;
+namespace neokyuubi\PhantomJs\Tests\Unit\Http;
 
-use JonnyW\PhantomJs\Http\PdfRequest;
-use JonnyW\PhantomJs\Http\RequestInterface;
+use neokyuubi\PhantomJs\Http\PdfRequest;
+use neokyuubi\PhantomJs\Http\RequestInterface;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@neokyuubi.me>
  */
 class PdfRequestTest extends \PHPUnit_Framework_TestCase
 {
@@ -104,7 +104,7 @@ class PdfRequestTest extends \PHPUnit_Framework_TestCase
      */
     public function testInvalidMethodIsThrownIfMethodIsInvalid()
     {
-        $this->setExpectedException('\JonnyW\PhantomJs\Exception\InvalidMethodException');
+        $this->setExpectedException('\neokyuubi\PhantomJs\Exception\InvalidMethodException');
 
         $pdfRequest = $this->getPdfRequest();
         $pdfRequest->setMethod('INVALID_METHOD');
@@ -403,7 +403,7 @@ class PdfRequestTest extends \PHPUnit_Framework_TestCase
      */
     public function tesNotWritableExceptonIsThrownIfOutputPathIsNotWritable()
     {
-        $this->setExpectedException('\JonnyW\PhantomJs\Exception\NotWritableException');
+        $this->setExpectedException('\neokyuubi\PhantomJs\Exception\NotWritableException');
 
         $invalidPath = '/invalid/path';
 
@@ -506,7 +506,7 @@ class PdfRequestTest extends \PHPUnit_Framework_TestCase
      * @param  string                            $url     (default: null)
      * @param  string                            $method  (default: RequestInterface::METHOD_GET)
      * @param  int                               $timeout (default: 5000)
-     * @return \JonnyW\PhantomJs\Http\PdfRequest
+     * @return \neokyuubi\PhantomJs\Http\PdfRequest
      */
     protected function getPdfRequest($url = null, $method = RequestInterface::METHOD_GET, $timeout = 5000)
     {

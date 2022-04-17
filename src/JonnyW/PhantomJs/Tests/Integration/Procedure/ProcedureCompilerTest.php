@@ -6,16 +6,16 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace JonnyW\PhantomJs\Tests\Integration\Procedure;
+namespace neokyuubi\PhantomJs\Tests\Integration\Procedure;
 
-use JonnyW\PhantomJs\Http\Request;
-use JonnyW\PhantomJs\Procedure\ProcedureCompiler;
-use JonnyW\PhantomJs\DependencyInjection\ServiceContainer;
+use neokyuubi\PhantomJs\Http\Request;
+use neokyuubi\PhantomJs\Procedure\ProcedureCompiler;
+use neokyuubi\PhantomJs\DependencyInjection\ServiceContainer;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@neokyuubi.me>
  */
 class ProcedureCompilerTest extends \PHPUnit_Framework_TestCase
 {
@@ -60,7 +60,7 @@ class ProcedureCompilerTest extends \PHPUnit_Framework_TestCase
         $request = $this->getRequest();
         $request->setUrl('http://test.com');
 
-        $renderer = $this->getMock('\JonnyW\PhantomJs\Template\TemplateRendererInterface');
+        $renderer = $this->getMock('\neokyuubi\PhantomJs\Template\TemplateRendererInterface');
         $renderer->expects($this->exactly(1))
             ->method('render')
             ->will($this->returnValue('var test=1; phantom.exit(1);'));
@@ -94,7 +94,7 @@ class ProcedureCompilerTest extends \PHPUnit_Framework_TestCase
         $request = $this->getRequest();
         $request->setUrl('http://test.com');
 
-        $renderer = $this->getMock('\JonnyW\PhantomJs\Template\TemplateRendererInterface');
+        $renderer = $this->getMock('\neokyuubi\PhantomJs\Template\TemplateRendererInterface');
         $renderer->expects($this->exactly(2))
             ->method('render')
             ->will($this->returnValue('var test=1; phantom.exit(1);'));
@@ -127,7 +127,7 @@ class ProcedureCompilerTest extends \PHPUnit_Framework_TestCase
         $request = $this->getRequest();
         $request->setUrl('http://test.com');
 
-        $renderer = $this->getMock('\JonnyW\PhantomJs\Template\TemplateRendererInterface');
+        $renderer = $this->getMock('\neokyuubi\PhantomJs\Template\TemplateRendererInterface');
         $renderer->expects($this->exactly(2))
             ->method('render')
             ->will($this->returnValue('var test=1; phantom.exit(1);'));
@@ -155,7 +155,7 @@ class ProcedureCompilerTest extends \PHPUnit_Framework_TestCase
      */
     public function testSyntaxExceptionIsThrownIfCompiledTemplateIsNotValid()
     {
-        $this->setExpectedException('\JonnyW\PhantomJs\Exception\SyntaxException');
+        $this->setExpectedException('\neokyuubi\PhantomJs\Exception\SyntaxException');
 
         $template = <<<EOF
     console.log(;
@@ -179,7 +179,7 @@ EOF;
      * Get procedure compiler.
      *
      * @access protected
-     * @return \JonnyW\PhantomJs\Procedure\ProcedureCompiler
+     * @return \neokyuubi\PhantomJs\Procedure\ProcedureCompiler
      */
     protected function getProcedureCompiler()
     {
@@ -200,7 +200,7 @@ EOF;
      *
      * @access protected
      * @param  string                                         $id
-     * @return \JonnyW\PhantomJs\Procedure\ProcedureInterface
+     * @return \neokyuubi\PhantomJs\Procedure\ProcedureInterface
      */
     protected function getProcedure($id)
     {
@@ -211,7 +211,7 @@ EOF;
      * Get request
      *
      * @access protected
-     * @return \JonnyW\PhantomJs\Http\Request
+     * @return \neokyuubi\PhantomJs\Http\Request
      */
     protected function getRequest()
     {

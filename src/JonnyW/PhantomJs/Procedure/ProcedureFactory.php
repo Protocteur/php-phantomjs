@@ -7,24 +7,24 @@
  * file that was distributed with this source code.
  */
 
-namespace JonnyW\PhantomJs\Procedure;
+namespace neokyuubi\PhantomJs\Procedure;
 
-use JonnyW\PhantomJs\Engine;
-use JonnyW\PhantomJs\Cache\CacheInterface;
-use JonnyW\PhantomJs\Parser\ParserInterface;
-use JonnyW\PhantomJs\Template\TemplateRendererInterface;
+use neokyuubi\PhantomJs\Engine;
+use neokyuubi\PhantomJs\Cache\CacheInterface;
+use neokyuubi\PhantomJs\Parser\ParserInterface;
+use neokyuubi\PhantomJs\Template\TemplateRendererInterface;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@neokyuubi.me>
  */
 class ProcedureFactory implements ProcedureFactoryInterface
 {
     /**
      * PhantomJS engine
      *
-     * @var \JonnyW\PhantomJs\Engine
+     * @var \neokyuubi\PhantomJs\Engine
      * @access protected
      */
     protected $engine;
@@ -32,7 +32,7 @@ class ProcedureFactory implements ProcedureFactoryInterface
     /**
      * Parser.
      *
-     * @var \JonnyW\PhantomJs\Parser\ParserInterface
+     * @var \neokyuubi\PhantomJs\Parser\ParserInterface
      * @access protected
      */
     protected $parser;
@@ -40,7 +40,7 @@ class ProcedureFactory implements ProcedureFactoryInterface
     /**
      * Cache handler.
      *
-     * @var \JonnyW\PhantomJs\Cache\CacheInterface
+     * @var \neokyuubi\PhantomJs\Cache\CacheInterface
      * @access protected
      */
     protected $cacheHandler;
@@ -48,7 +48,7 @@ class ProcedureFactory implements ProcedureFactoryInterface
     /**
      * Template renderer.
      *
-     * @var \JonnyW\PhantomJs\Template\TemplateRendererInterface
+     * @var \neokyuubi\PhantomJs\Template\TemplateRendererInterface
      * @access protected
      */
     protected $renderer;
@@ -57,10 +57,10 @@ class ProcedureFactory implements ProcedureFactoryInterface
      * Internal constructor.
      *
      * @access public
-     * @param \JonnyW\PhantomJs\Engine                             $engine
-     * @param \JonnyW\PhantomJs\Parser\ParserInterface             $parser
-     * @param \JonnyW\PhantomJs\Cache\CacheInterface               $cacheHandler
-     * @param \JonnyW\PhantomJs\Template\TemplateRendererInterface $renderer
+     * @param \neokyuubi\PhantomJs\Engine                             $engine
+     * @param \neokyuubi\PhantomJs\Parser\ParserInterface             $parser
+     * @param \neokyuubi\PhantomJs\Cache\CacheInterface               $cacheHandler
+     * @param \neokyuubi\PhantomJs\Template\TemplateRendererInterface $renderer
      */
     public function __construct(Engine $engine, ParserInterface $parser, CacheInterface $cacheHandler, TemplateRendererInterface $renderer)
     {
@@ -74,7 +74,7 @@ class ProcedureFactory implements ProcedureFactoryInterface
      * Create new procedure instance.
      *
      * @access public
-     * @return \JonnyW\PhantomJs\Procedure\Procedure
+     * @return \neokyuubi\PhantomJs\Procedure\Procedure
      */
     public function createProcedure()
     {

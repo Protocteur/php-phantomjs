@@ -7,12 +7,12 @@
  * file that was distributed with this source code.
  */
 
-namespace JonnyW\PhantomJs\Procedure;
+namespace neokyuubi\PhantomJs\Procedure;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@neokyuubi.me>
  */
 interface ProcedureLoaderFactoryInterface
 {
@@ -21,7 +21,7 @@ interface ProcedureLoaderFactoryInterface
      *
      * @access public
      * @param  string                                               $directory
-     * @return \JonnyW\PhantomJs\Procedure\ProcedureLoaderInterface
+     * @return \neokyuubi\PhantomJs\Procedure\ProcedureLoaderInterface
      */
     public function createProcedureLoader($directory);
 }

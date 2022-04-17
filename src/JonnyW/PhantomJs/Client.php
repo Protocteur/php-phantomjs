@@ -6,26 +6,26 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace JonnyW\PhantomJs;
+namespace neokyuubi\PhantomJs;
 
-use JonnyW\PhantomJs\Procedure\ProcedureLoaderInterface;
-use JonnyW\PhantomJs\Procedure\ProcedureCompilerInterface;
-use JonnyW\PhantomJs\Http\MessageFactoryInterface;
-use JonnyW\PhantomJs\Http\RequestInterface;
-use JonnyW\PhantomJs\Http\ResponseInterface;
-use JonnyW\PhantomJs\DependencyInjection\ServiceContainer;
+use neokyuubi\PhantomJs\Procedure\ProcedureLoaderInterface;
+use neokyuubi\PhantomJs\Procedure\ProcedureCompilerInterface;
+use neokyuubi\PhantomJs\Http\MessageFactoryInterface;
+use neokyuubi\PhantomJs\Http\RequestInterface;
+use neokyuubi\PhantomJs\Http\ResponseInterface;
+use neokyuubi\PhantomJs\DependencyInjection\ServiceContainer;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@neokyuubi.me>
  */
 class Client implements ClientInterface
 {
     /**
      * Client.
      *
-     * @var \JonnyW\PhantomJs\ClientInterface
+     * @var \neokyuubi\PhantomJs\ClientInterface
      * @access private
      */
     private static $instance;
@@ -33,7 +33,7 @@ class Client implements ClientInterface
     /**
      * PhantomJs engine.
      *
-     * @var \JonnyW\PhantomJs\Engine
+     * @var \neokyuubi\PhantomJs\Engine
      * @access protected
      */
     protected $engine;
@@ -41,7 +41,7 @@ class Client implements ClientInterface
     /**
      * Procedure loader.
      *
-     * @var \JonnyW\PhantomJs\Procedure\ProcedureLoaderInterface
+     * @var \neokyuubi\PhantomJs\Procedure\ProcedureLoaderInterface
      * @access protected
      */
     protected $procedureLoader;
@@ -49,7 +49,7 @@ class Client implements ClientInterface
     /**
      * Procedure validator.
      *
-     * @var \JonnyW\PhantomJs\Procedure\ProcedureCompilerInterface
+     * @var \neokyuubi\PhantomJs\Procedure\ProcedureCompilerInterface
      * @access protected
      */
     protected $procedureCompiler;
@@ -57,7 +57,7 @@ class Client implements ClientInterface
     /**
      * Message factory.
      *
-     * @var \JonnyW\PhantomJs\Http\MessageFactoryInterface
+     * @var \neokyuubi\PhantomJs\Http\MessageFactoryInterface
      * @access protected
      */
     protected $messageFactory;
@@ -74,10 +74,10 @@ class Client implements ClientInterface
      * Internal constructor
      *
      * @access public
-     * @param  \JonnyW\PhantomJs\Engine                               $engine
-     * @param  \JonnyW\PhantomJs\Procedure\ProcedureLoaderInterface   $procedureLoader
-     * @param  \JonnyW\PhantomJs\Procedure\ProcedureCompilerInterface $procedureCompiler
-     * @param  \JonnyW\PhantomJs\Http\MessageFactoryInterface         $messageFactory
+     * @param  \neokyuubi\PhantomJs\Engine                               $engine
+     * @param  \neokyuubi\PhantomJs\Procedure\ProcedureLoaderInterface   $procedureLoader
+     * @param  \neokyuubi\PhantomJs\Procedure\ProcedureCompilerInterface $procedureCompiler
+     * @param  \neokyuubi\PhantomJs\Http\MessageFactoryInterface         $messageFactory
      * @return void
      */
     public function __construct(Engine $engine, ProcedureLoaderInterface $procedureLoader, ProcedureCompilerInterface $procedureCompiler, MessageFactoryInterface $messageFactory)
@@ -93,7 +93,7 @@ class Client implements ClientInterface
      * Get singleton instance
      *
      * @access public
-     * @return \JonnyW\PhantomJs\Client
+     * @return \neokyuubi\PhantomJs\Client
      */
     public static function getInstance()
     {
@@ -116,7 +116,7 @@ class Client implements ClientInterface
      * Get PhantomJs engine.
      *
      * @access public
-     * @return \JonnyW\PhantomJs\Engine
+     * @return \neokyuubi\PhantomJs\Engine
      */
     public function getEngine()
     {
@@ -127,7 +127,7 @@ class Client implements ClientInterface
      * Get message factory instance
      *
      * @access public
-     * @return \JonnyW\PhantomJs\Http\MessageFactoryInterface
+     * @return \neokyuubi\PhantomJs\Http\MessageFactoryInterface
      */
     public function getMessageFactory()
     {
@@ -138,7 +138,7 @@ class Client implements ClientInterface
      * Get procedure loader instance
      *
      * @access public
-     * @return \JonnyW\PhantomJs\Procedure\ProcedureLoaderInterface
+     * @return \neokyuubi\PhantomJs\Procedure\ProcedureLoaderInterface
      */
     public function getProcedureLoader()
     {
@@ -149,9 +149,9 @@ class Client implements ClientInterface
      * Send request
      *
      * @access public
-     * @param  \JonnyW\PhantomJs\Http\RequestInterface  $request
-     * @param  \JonnyW\PhantomJs\Http\ResponseInterface $response
-     * @return \JonnyW\PhantomJs\Http\ResponseInterface
+     * @param  \neokyuubi\PhantomJs\Http\RequestInterface  $request
+     * @param  \neokyuubi\PhantomJs\Http\ResponseInterface $response
+     * @return \neokyuubi\PhantomJs\Http\ResponseInterface
      */
     public function send(RequestInterface $request, ResponseInterface $response)
     {
@@ -202,7 +202,7 @@ class Client implements ClientInterface
      * Get procedure compiler.
      *
      * @access public
-     * @return \JonnyW\PhantomJs\Procedure\ProcedureCompilerInterface
+     * @return \neokyuubi\PhantomJs\Procedure\ProcedureCompilerInterface
      */
     public function getProcedureCompiler()
     {

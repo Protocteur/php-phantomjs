@@ -7,12 +7,12 @@
  * file that was distributed with this source code.
  */
 
-namespace JonnyW\PhantomJs\Http;
+namespace neokyuubi\PhantomJs\Http;
 
 /**
  * PHP PhantomJs.
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@neokyuubi.me>
  */
 interface CaptureRequestInterface
 {

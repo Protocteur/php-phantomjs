@@ -6,23 +6,23 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace JonnyW\PhantomJs\Procedure;
+namespace neokyuubi\PhantomJs\Procedure;
 
-use JonnyW\PhantomJs\Validator\EngineInterface;
-use JonnyW\PhantomJs\Exception\SyntaxException;
-use JonnyW\PhantomJs\Exception\RequirementException;
+use neokyuubi\PhantomJs\Validator\EngineInterface;
+use neokyuubi\PhantomJs\Exception\SyntaxException;
+use neokyuubi\PhantomJs\Exception\RequirementException;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@neokyuubi.me>
  */
 class ProcedureValidator implements ProcedureValidatorInterface
 {
     /**
      * Procedure loader.
      *
-     * @var \JonnyW\PhantomJs\Procedure\ProcedureLoaderInterface
+     * @var \neokyuubi\PhantomJs\Procedure\ProcedureLoaderInterface
      * @access protected
      */
     protected $procedureLoader;
@@ -30,7 +30,7 @@ class ProcedureValidator implements ProcedureValidatorInterface
     /**
      * Validator engine
      *
-     * @var \JonnyW\PhantomJs\Validator\EngineInterface
+     * @var \neokyuubi\PhantomJs\Validator\EngineInterface
      * @access protected
      */
     protected $engine;
@@ -39,8 +39,8 @@ class ProcedureValidator implements ProcedureValidatorInterface
      * Internal constructor.
      *
      * @access public
-     * @param \JonnyW\PhantomJs\Procedure\ProcedureLoaderInterface $procedureLoader
-     * @param \JonnyW\PhantomJs\Validator\EngineInterface          $engine
+     * @param \neokyuubi\PhantomJs\Procedure\ProcedureLoaderInterface $procedureLoader
+     * @param \neokyuubi\PhantomJs\Validator\EngineInterface          $engine
      */
     public function __construct(ProcedureLoaderInterface $procedureLoader, EngineInterface $engine)
     {
@@ -54,7 +54,7 @@ class ProcedureValidator implements ProcedureValidatorInterface
      * @access public
      * @param  string                                                   $procedure
      * @return boolean
-     * @throws \JonnyW\PhantomJs\Exception\ProcedureValidationException
+     * @throws \neokyuubi\PhantomJs\Exception\ProcedureValidationException
      */
     public function validate($procedure)
     {
@@ -70,7 +70,7 @@ class ProcedureValidator implements ProcedureValidatorInterface
      * @access protected
      * @param  string                                      $procedure
      * @return void
-     * @throws \JonnyW\PhantomJs\Exception\SyntaxException
+     * @throws \neokyuubi\PhantomJs\Exception\SyntaxException
      */
     protected function validateSyntax($procedure)
     {
@@ -96,7 +96,7 @@ class ProcedureValidator implements ProcedureValidatorInterface
      * @access protected
      * @param  string                                           $procedure
      * @return void
-     * @throws \JonnyW\PhantomJs\Exception\RequirementException
+     * @throws \neokyuubi\PhantomJs\Exception\RequirementException
      */
     protected function validateRequirements($procedure)
     {

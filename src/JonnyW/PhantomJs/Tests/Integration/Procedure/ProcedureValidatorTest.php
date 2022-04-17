@@ -6,20 +6,20 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace JonnyW\PhantomJs\Tests\Integration\Procedure;
+namespace neokyuubi\PhantomJs\Tests\Integration\Procedure;
 
 use Symfony\Component\Config\FileLocator;
-use JonnyW\PhantomJs\Client;
-use JonnyW\PhantomJs\Procedure\Procedure;
-use JonnyW\PhantomJs\Procedure\ProcedureLoaderInterface;
-use JonnyW\PhantomJs\Procedure\ProcedureValidator;
-use JonnyW\PhantomJs\Validator\Esprima;
-use JonnyW\PhantomJs\Validator\EngineInterface;
+use neokyuubi\PhantomJs\Client;
+use neokyuubi\PhantomJs\Procedure\Procedure;
+use neokyuubi\PhantomJs\Procedure\ProcedureLoaderInterface;
+use neokyuubi\PhantomJs\Procedure\ProcedureValidator;
+use neokyuubi\PhantomJs\Validator\Esprima;
+use neokyuubi\PhantomJs\Validator\EngineInterface;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@neokyuubi.me>
  */
 class ProcedureValidatorTest extends \PHPUnit_Framework_TestCase
 {
@@ -38,7 +38,7 @@ class ProcedureValidatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testProcedureSyntaxExceptionIsThrownIfProcedureContainsSyntaxError()
     {
-        $this->setExpectedException('\JonnyW\PhantomJs\Exception\SyntaxException');
+        $this->setExpectedException('\neokyuubi\PhantomJs\Exception\SyntaxException');
 
         $procedureLoader = $this->getProcedureLoader();
         $esprima         = $this->getEsprima();
@@ -63,7 +63,7 @@ class ProcedureValidatorTest extends \PHPUnit_Framework_TestCase
             $validator = $this->getValidator($procedureLoader, $esprima);
             $validator->validate('return false; var');
 
-        } catch (\JonnyW\PhantomJs\Exception\SyntaxException $e) {
+        } catch (\neokyuubi\PhantomJs\Exception\SyntaxException $e) {
             $this->assertNotEmpty($e->getErrors());
         }
     }
@@ -78,7 +78,7 @@ class ProcedureValidatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testRequirementExceptionIsThrownIfProcedureDoesNotContainPhanomtExitStatement()
     {
-        $this->setExpectedException('\JonnyW\PhantomJs\Exception\RequirementException');
+        $this->setExpectedException('\neokyuubi\PhantomJs\Exception\RequirementException');
 
         $procedureLoader = $this->getProcedureLoader();
         $esprima         = $this->getEsprima();
@@ -128,9 +128,9 @@ class ProcedureValidatorTest extends \PHPUnit_Framework_TestCase
      * Get procedure validator.
      *
      * @access protected
-     * @param  \JonnyW\PhantomJs\Procedure\ProcedureLoaderInterface $procedureLoader
-     * @param  \JonnyW\PhantomJs\Validator\EngineInterface          $engine
-     * @return \JonnyW\PhantomJs\Procedure\ProcedureValidator
+     * @param  \neokyuubi\PhantomJs\Procedure\ProcedureLoaderInterface $procedureLoader
+     * @param  \neokyuubi\PhantomJs\Validator\EngineInterface          $engine
+     * @return \neokyuubi\PhantomJs\Procedure\ProcedureValidator
      */
     protected function getValidator(ProcedureLoaderInterface $procedureLoader, EngineInterface $engine)
     {
@@ -143,7 +143,7 @@ class ProcedureValidatorTest extends \PHPUnit_Framework_TestCase
      * Get procedure loader.
      *
      * @access protected
-     * @return \JonnyW\PhantomJs\Procedure\ProcedureLoader
+     * @return \neokyuubi\PhantomJs\Procedure\ProcedureLoader
      */
     protected function getProcedureLoader()
     {
@@ -154,7 +154,7 @@ class ProcedureValidatorTest extends \PHPUnit_Framework_TestCase
      * Get esprima.
      *
      * @access protected
-     * @return \JonnyW\PhantomJs\Validator\Esprima
+     * @return \neokyuubi\PhantomJs\Validator\Esprima
      */
     protected function getEsprima()
     {

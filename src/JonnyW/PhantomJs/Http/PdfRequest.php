@@ -7,12 +7,12 @@
  * file that was distributed with this source code.
  */
 
-namespace JonnyW\PhantomJs\Http;
+namespace neokyuubi\PhantomJs\Http;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@neokyuubi.me>
  */
 class PdfRequest extends CaptureRequest
     implements PdfRequestInterface
@@ -80,7 +80,7 @@ class PdfRequest extends CaptureRequest
      * @param  string                                $url     (default: null)
      * @param  string                                $method  (default: RequestInterface::METHOD_GET)
      * @param  int                                   $timeout (default: 5000)
-     * @return \JonnyW\PhantomJs\Http\CaptureRequest
+     * @return \neokyuubi\PhantomJs\Http\CaptureRequest
      */
     public function __construct($url = null, $method = RequestInterface::METHOD_GET, $timeout = 5000)
     {

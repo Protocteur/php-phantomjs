@@ -6,15 +6,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace JonnyW\PhantomJs\Tests\Unit\Validator;
+namespace neokyuubi\PhantomJs\Tests\Unit\Validator;
 
 use Symfony\Component\Config\FileLocator;
-use JonnyW\PhantomJs\Validator\Esprima;
+use neokyuubi\PhantomJs\Validator\Esprima;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@neokyuubi.me>
  */
 class EsprimaTest extends \PHPUnit_Framework_TestCase
 {
@@ -93,7 +93,7 @@ class EsprimaTest extends \PHPUnit_Framework_TestCase
      * Get esprima.
      *
      * @access protected
-     * @return \JonnyW\PhantomJs\Validator\Esprima
+     * @return \neokyuubi\PhantomJs\Validator\Esprima
      */
     protected function getEsprima(FileLocator $fileLocator, $file)
     {

@@ -1,5 +1,5 @@
 {
-    "name": "jonnyw/php-phantomjs",
+    "name": "neokyuubi/php-phantomjs",
     "description": "A PHP wrapper for loading pages through PhantomJS",
     "keywords": ["PhantomJS", "Testing", "Headless Browser"],
 	"type": "library",
@@ -28,7 +28,7 @@
     },
     "autoload": {
         "psr-0": {
-            "JonnyW\\PhantomJs\\": "src"
+            "neokyuubi\\PhantomJs\\": "src"
         },
 		"classmap": ["src/"]
     },

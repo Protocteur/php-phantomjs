@@ -6,14 +6,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace JonnyW\PhantomJs;
+namespace neokyuubi\PhantomJs;
 
-use JonnyW\PhantomJs\Exception\InvalidExecutableException;
+use neokyuubi\PhantomJs\Exception\InvalidExecutableException;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@neokyuubi.me>
  */
 class Engine
 {
@@ -102,7 +102,7 @@ class Engine
      *
      * @access public
      * @param  string                   $path
-     * @return \JonnyW\PhantomJs\Client
+     * @return \neokyuubi\PhantomJs\Client
      */
     public function setPath($path)
     {
@@ -129,7 +129,7 @@ class Engine
      *
      * @access public
      * @param  array                    $options
-     * @return \JonnyW\PhantomJs\Client
+     * @return \neokyuubi\PhantomJs\Client
      */
     public function setOptions(array $options)
     {
@@ -154,7 +154,7 @@ class Engine
      *
      * @access public
      * @param  string                   $option
-     * @return \JonnyW\PhantomJs\Client
+     * @return \neokyuubi\PhantomJs\Client
      */
     public function addOption($option)
     {
@@ -170,7 +170,7 @@ class Engine
      *
      * @access public
      * @param  boolean                  $doDebug
-     * @return \JonnyW\PhantomJs\Client
+     * @return \neokyuubi\PhantomJs\Client
      */
     public function debug($doDebug)
     {
@@ -184,7 +184,7 @@ class Engine
      *
      * @access public
      * @param  boolean                  $doCache
-     * @return \JonnyW\PhantomJs\Client
+     * @return \neokyuubi\PhantomJs\Client
      */
     public function cache($doCache)
     {
@@ -198,7 +198,7 @@ class Engine
      *
      * @access public
      * @param  string                   $info
-     * @return \JonnyW\PhantomJs\Client
+     * @return \neokyuubi\PhantomJs\Client
      */
     public function log($info)
     {
@@ -222,7 +222,7 @@ class Engine
      * Clear log info.
      *
      * @access public
-     * @return \JonnyW\PhantomJs\Client
+     * @return \neokyuubi\PhantomJs\Client
      */
     public function clearLog()
     {
@@ -237,7 +237,7 @@ class Engine
      * @access private
      * @param  string                                                 $file
      * @return boolean
-     * @throws \JonnyW\PhantomJs\Exception\InvalidExecutableException
+     * @throws \neokyuubi\PhantomJs\Exception\InvalidExecutableException
      */
     private function validateExecutable($file)
     {
