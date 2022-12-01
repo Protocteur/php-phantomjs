@@ -1,6 +1,6 @@
 {
     "name": "neokyuubi/php-phantomjs",
-    "description": "A PHP wrapper for loading pages through PhantomJS",
+    "description": "A PHP wrapper for loading pages through PhantomJS 4",
     "keywords": ["PhantomJS", "Testing", "Headless Browser"],
 	"type": "library",
     "license": "MIT",
