@@ -52,7 +52,7 @@ parameters:
     phantomjs.template.template_renderer.class: protocteur\PhantomJs\Template\TemplateRenderer
     phantomjs.twig.environment.class: Twig\Environment
     phantomjs.twig.lexer.class: Twig\Lexer
-#    phantomjs.twig.array_loader.class: Twig_Loader_Array
+    phantomjs.twig.array_loader.class: Twig\Loader\ArrayLoader
 
 ##################
 ### RESOURCES ####
