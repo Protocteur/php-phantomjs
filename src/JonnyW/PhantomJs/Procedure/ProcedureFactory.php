@@ -7,24 +7,24 @@
  * file that was distributed with this source code.
  */
 
-namespace neokyuubi\PhantomJs\Procedure;
+namespace protocteur\PhantomJs\Procedure;
 
-use neokyuubi\PhantomJs\Engine;
-use neokyuubi\PhantomJs\Cache\CacheInterface;
-use neokyuubi\PhantomJs\Parser\ParserInterface;
-use neokyuubi\PhantomJs\Template\TemplateRendererInterface;
+use protocteur\PhantomJs\Engine;
+use protocteur\PhantomJs\Cache\CacheInterface;
+use protocteur\PhantomJs\Parser\ParserInterface;
+use protocteur\PhantomJs\Template\TemplateRendererInterface;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class ProcedureFactory implements ProcedureFactoryInterface
 {
     /**
      * PhantomJS engine
      *
-     * @var \neokyuubi\PhantomJs\Engine
+     * @var \protocteur\PhantomJs\Engine
      * @access protected
      */
     protected $engine;
@@ -32,7 +32,7 @@ class ProcedureFactory implements ProcedureFactoryInterface
     /**
      * Parser.
      *
-     * @var \neokyuubi\PhantomJs\Parser\ParserInterface
+     * @var \protocteur\PhantomJs\Parser\ParserInterface
      * @access protected
      */
     protected $parser;
@@ -40,7 +40,7 @@ class ProcedureFactory implements ProcedureFactoryInterface
     /**
      * Cache handler.
      *
-     * @var \neokyuubi\PhantomJs\Cache\CacheInterface
+     * @var \protocteur\PhantomJs\Cache\CacheInterface
      * @access protected
      */
     protected $cacheHandler;
@@ -48,7 +48,7 @@ class ProcedureFactory implements ProcedureFactoryInterface
     /**
      * Template renderer.
      *
-     * @var \neokyuubi\PhantomJs\Template\TemplateRendererInterface
+     * @var \protocteur\PhantomJs\Template\TemplateRendererInterface
      * @access protected
      */
     protected $renderer;
@@ -57,10 +57,10 @@ class ProcedureFactory implements ProcedureFactoryInterface
      * Internal constructor.
      *
      * @access public
-     * @param \neokyuubi\PhantomJs\Engine                             $engine
-     * @param \neokyuubi\PhantomJs\Parser\ParserInterface             $parser
-     * @param \neokyuubi\PhantomJs\Cache\CacheInterface               $cacheHandler
-     * @param \neokyuubi\PhantomJs\Template\TemplateRendererInterface $renderer
+     * @param \protocteur\PhantomJs\Engine                             $engine
+     * @param \protocteur\PhantomJs\Parser\ParserInterface             $parser
+     * @param \protocteur\PhantomJs\Cache\CacheInterface               $cacheHandler
+     * @param \protocteur\PhantomJs\Template\TemplateRendererInterface $renderer
      */
     public function __construct(Engine $engine, ParserInterface $parser, CacheInterface $cacheHandler, TemplateRendererInterface $renderer)
     {

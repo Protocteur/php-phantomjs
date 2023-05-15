@@ -7,21 +7,21 @@
  * file that was distributed with this source code.
  */
 
-namespace neokyuubi\PhantomJs\Procedure;
+namespace protocteur\PhantomJs\Procedure;
 
 use Symfony\Component\Config\FileLocator;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class ProcedureLoaderFactory implements ProcedureLoaderFactoryInterface
 {
     /**
      * Procedure factory.
      *
-     * @var \neokyuubi\PhantomJs\Procedure\ProcedureFactoryInterface
+     * @var \protocteur\PhantomJs\Procedure\ProcedureFactoryInterface
      * @access protected
      */
     protected $procedureFactory;
@@ -30,7 +30,7 @@ class ProcedureLoaderFactory implements ProcedureLoaderFactoryInterface
      * Internal constructor.
      *
      * @access public
-     * @param \neokyuubi\PhantomJs\Procedure\ProcedureFactoryInterface $procedureFactory
+     * @param \protocteur\PhantomJs\Procedure\ProcedureFactoryInterface $procedureFactory
      */
     public function __construct(ProcedureFactoryInterface $procedureFactory)
     {

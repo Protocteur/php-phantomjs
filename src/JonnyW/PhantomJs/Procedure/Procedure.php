@@ -6,9 +6,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace neokyuubi\PhantomJs\Procedure;
+namespace protocteur\PhantomJs\Procedure;
 
-use neokyuubi\PhantomJs\Engine;
+use protocteur\PhantomJs\Engine;
 use neokyuubi\PhantomJs\Cache\CacheInterface;
 use neokyuubi\PhantomJs\Parser\ParserInterface;
 use neokyuubi\PhantomJs\Template\TemplateRendererInterface;

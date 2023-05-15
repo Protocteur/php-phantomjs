@@ -6,12 +6,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace neokyuubi\PhantomJs\Procedure;
+namespace protocteur\PhantomJs\Procedure;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class ChainProcedureLoader implements ProcedureLoaderInterface
 {
@@ -38,7 +38,7 @@ class ChainProcedureLoader implements ProcedureLoaderInterface
      * Add procedure loader.
      *
      * @access public
-     * @param  \neokyuubi\PhantomJs\Procedure\ProcedureLoaderInterface $procedureLoader
+     * @param  \protocteur\PhantomJs\Procedure\ProcedureLoaderInterface $procedureLoader
      * @return void
      */
     public function addLoader(ProcedureLoaderInterface $procedureLoader)
@@ -52,11 +52,11 @@ class ChainProcedureLoader implements ProcedureLoaderInterface
      * @access public
      * @param  string                                         $id
      * @throws \InvalidArgumentException
-     * @return \neokyuubi\PhantomJs\Procedure\ProcedureInterface
+     * @return \protocteur\PhantomJs\Procedure\ProcedureInterface
      */
     public function load($id)
     {
-        /** @var \neokyuubi\PhantomJs\Procedure\ProcedureLoaderInterface $loader **/
+        /** @var \protocteur\PhantomJs\Procedure\ProcedureLoaderInterface $loader **/
         foreach ($this->procedureLoaders as $loader) {
 
             try {
@@ -83,7 +83,7 @@ class ChainProcedureLoader implements ProcedureLoaderInterface
      */
     public function loadTemplate($id, $extension = 'proc')
     {
-        /** @var \neokyuubi\PhantomJs\Procedure\ProcedureLoaderInterface $loader **/
+        /** @var \protocteur\PhantomJs\Procedure\ProcedureLoaderInterface $loader **/
         foreach ($this->procedureLoaders as $loader) {
 
             try {

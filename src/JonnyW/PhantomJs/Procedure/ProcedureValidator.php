@@ -6,23 +6,23 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace neokyuubi\PhantomJs\Procedure;
+namespace protocteur\PhantomJs\Procedure;
 
-use neokyuubi\PhantomJs\Validator\EngineInterface;
-use neokyuubi\PhantomJs\Exception\SyntaxException;
-use neokyuubi\PhantomJs\Exception\RequirementException;
+use protocteur\PhantomJs\Validator\EngineInterface;
+use protocteur\PhantomJs\Exception\SyntaxException;
+use protocteur\PhantomJs\Exception\RequirementException;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class ProcedureValidator implements ProcedureValidatorInterface
 {
     /**
      * Procedure loader.
      *
-     * @var \neokyuubi\PhantomJs\Procedure\ProcedureLoaderInterface
+     * @var \protocteur\PhantomJs\Procedure\ProcedureLoaderInterface
      * @access protected
      */
     protected $procedureLoader;

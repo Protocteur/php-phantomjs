@@ -7,12 +7,12 @@
  * file that was distributed with this source code.
  */
 
-namespace neokyuubi\PhantomJs\Procedure;
+namespace protocteur\PhantomJs\Procedure;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 interface OutputInterface
 {

@@ -6,22 +6,22 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace neokyuubi\PhantomJs\Procedure;
+namespace protocteur\PhantomJs\Procedure;
 
 use Symfony\Component\Config\FileLocatorInterface;
-use neokyuubi\PhantomJs\Exception\NotExistsException;
+use protocteur\PhantomJs\Exception\NotExistsException;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class ProcedureLoader implements ProcedureLoaderInterface
 {
     /**
      * Procedure factory.
      *
-     * @var \neokyuubi\PhantomJs\Procedure\ProcedureFactoryInterface
+     * @var \protocteur\PhantomJs\Procedure\ProcedureFactoryInterface
      * @access protected
      */
     protected $procedureFactory;

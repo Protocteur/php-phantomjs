@@ -6,14 +6,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace neokyuubi\PhantomJs\Validator;
+namespace protocteur\PhantomJs\Validator;
 
 use Symfony\Component\Config\FileLocatorInterface;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class Esprima implements EngineInterface
 {

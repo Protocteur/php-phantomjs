@@ -6,12 +6,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace neokyuubi\PhantomJs\Procedure;
+namespace protocteur\PhantomJs\Procedure;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 interface ProcedureInterface
 {
@@ -19,8 +19,8 @@ interface ProcedureInterface
      * Run procedure.
      *
      * @access public
-     * @param \neokyuubi\PhantomJs\Procedure\InputInterface  $input
-     * @param \neokyuubi\PhantomJs\Procedure\OutputInterface $output
+     * @param \protocteur\PhantomJs\Procedure\InputInterface  $input
+     * @param \protocteur\PhantomJs\Procedure\OutputInterface $output
      */
     public function run(InputInterface $input, OutputInterface $output);
 
@@ -44,7 +44,7 @@ interface ProcedureInterface
      * Compile procedure.
      *
      * @access public
-     * @param  \neokyuubi\PhantomJs\Procedure\InputInterface $input
+     * @param  \protocteur\PhantomJs\Procedure\InputInterface $input
      * @return string
      */
     public function compile(InputInterface $input);

@@ -14,42 +14,42 @@ parameters:
 ### ENGINE ###
 ##############
 
-    phantomjs.engine.class: neokyuubi\PhantomJs\Engine
+    phantomjs.engine.class: protocteur\PhantomJs\Engine
 
 ##################
 ### PROCEDURES ###
 ##################
 
-    phantomjs.procedure.procedure_loader.class: neokyuubi\PhantomJs\Procedure\ProcedureLoader
-    phantomjs.procedure.chain_loader.class: neokyuubi\PhantomJs\Procedure\ChainProcedureLoader
-    phantomjs.procedure.procedure_factory.class: neokyuubi\PhantomJs\Procedure\ProcedureFactory
-    phantomjs.procedure.procedure_loader_factory.class: neokyuubi\PhantomJs\Procedure\ProcedureLoaderFactory
-    phantomjs.procedure.procedure_validator.class: neokyuubi\PhantomJs\Procedure\ProcedureValidator
-    phantomjs.procedure.procedure_compiler.class: neokyuubi\PhantomJs\Procedure\ProcedureCompiler
+    phantomjs.procedure.procedure_loader.class: protocteur\PhantomJs\Procedure\ProcedureLoader
+    phantomjs.procedure.chain_loader.class: protocteur\PhantomJs\Procedure\ChainProcedureLoader
+    phantomjs.procedure.procedure_factory.class: protocteur\PhantomJs\Procedure\ProcedureFactory
+    phantomjs.procedure.procedure_loader_factory.class: protocteur\PhantomJs\Procedure\ProcedureLoaderFactory
+    phantomjs.procedure.procedure_validator.class: protocteur\PhantomJs\Procedure\ProcedureValidator
+    phantomjs.procedure.procedure_compiler.class: protocteur\PhantomJs\Procedure\ProcedureCompiler
 
 ############
 ### HTTP ###
 ############
 
-    phantomjs.http.message_factory.class: neokyuubi\PhantomJs\Http\MessageFactory
+    phantomjs.http.message_factory.class: protocteur\PhantomJs\Http\MessageFactory
 
 ################
 ### PARSING ####
 ################
 
-    phantomjs.parser.json_parser.class: neokyuubi\PhantomJs\Parser\JsonParser
+    phantomjs.parser.json_parser.class: protocteur\PhantomJs\Parser\JsonParser
 
 ###################
 ### VALIDATION ####
 ###################
 
-    phantomjs.validator.esprima.class: neokyuubi\PhantomJs\Validator\Esprima
+    phantomjs.validator.esprima.class: protocteur\PhantomJs\Validator\Esprima
 
 ##################
 ### TEMPLATES ####
 ##################
 
-    phantomjs.template.template_renderer.class: neokyuubi\PhantomJs\Template\TemplateRenderer
+    phantomjs.template.template_renderer.class: protocteur\PhantomJs\Template\TemplateRenderer
     phantomjs.twig.environment.class: Twig_Environment
     phantomjs.twig.lexer.class: Twig_Lexer
     phantomjs.twig.array_loader.class: Twig_Loader_Array
@@ -58,5 +58,5 @@ parameters:
 ### RESOURCES ####
 ##################
 
-    phantomjs.cache.file_cache.class: neokyuubi\PhantomJs\Cache\FileCache
+    phantomjs.cache.file_cache.class: protocteur\PhantomJs\Cache\FileCache
     phantomjs.loader.file_locator.class: Symfony\Component\Config\FileLocator

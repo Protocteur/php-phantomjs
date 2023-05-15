@@ -7,22 +7,22 @@
  * file that was distributed with this source code.
  */
 
-namespace neokyuubi\PhantomJs\Procedure;
+namespace protocteur\PhantomJs\Procedure;
 
-use neokyuubi\PhantomJs\Cache\CacheInterface;
-use neokyuubi\PhantomJs\Template\TemplateRendererInterface;
+use protocteur\PhantomJs\Cache\CacheInterface;
+use protocteur\PhantomJs\Template\TemplateRendererInterface;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class ProcedureCompiler implements ProcedureCompilerInterface
 {
     /**
      * Procedure loader
      *
-     * @var \neokyuubi\PhantomJs\Procedure\ProcedureLoaderInterface
+     * @var \protocteur\PhantomJs\Procedure\ProcedureLoaderInterface
      * @access protected
      */
     protected $procedureLoader;
@@ -30,7 +30,7 @@ class ProcedureCompiler implements ProcedureCompilerInterface
     /**
      * Procedure validator
      *
-     * @var \neokyuubi\PhantomJs\Procedure\ProcedureValidatorInterface
+     * @var \protocteur\PhantomJs\Procedure\ProcedureValidatorInterface
      * @access protected
      */
     protected $procedureValidator;
@@ -38,7 +38,7 @@ class ProcedureCompiler implements ProcedureCompilerInterface
     /**
      * Cache handler
      *
-     * @var \neokyuubi\PhantomJs\Cache\CacheInterface
+     * @var \protocteur\PhantomJs\Cache\CacheInterface
      * @access protected
      */
     protected $cacheHandler;

@@ -6,12 +6,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace neokyuubi\PhantomJs\Procedure;
+namespace protocteur\PhantomJs\Procedure;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 interface ProcedureValidatorInterface
 {
@@ -21,7 +21,7 @@ interface ProcedureValidatorInterface
      * @access public
      * @param  string                                                   $procedure
      * @return boolean
-     * @throws \neokyuubi\PhantomJs\Exception\ProcedureValidationException
+     * @throws \protocteur\PhantomJs\Exception\ProcedureValidationException
      */
     public function validate($procedure);
 }

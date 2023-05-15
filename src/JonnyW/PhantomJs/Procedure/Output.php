@@ -7,12 +7,12 @@
  * file that was distributed with this source code.
  */
 
-namespace neokyuubi\PhantomJs\Procedure;
+namespace protocteur\PhantomJs\Procedure;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class Output implements OutputInterface
 {
@@ -61,7 +61,7 @@ class Output implements OutputInterface
      * @access public
      * @param  string                             $name
      * @param  mixed                              $value
-     * @return \neokyuubi\PhantomJs\Procedure\Output
+     * @return \protocteur\PhantomJs\Procedure\Output
      */
     public function set($name, $value)
     {

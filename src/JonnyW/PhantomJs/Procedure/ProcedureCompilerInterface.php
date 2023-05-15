@@ -7,12 +7,12 @@
  * file that was distributed with this source code.
  */
 
-namespace neokyuubi\PhantomJs\Procedure;
+namespace protocteur\PhantomJs\Procedure;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 interface ProcedureCompilerInterface
 {
@@ -20,8 +20,8 @@ interface ProcedureCompilerInterface
      * Compile partials into procedure.
      *
      * @access public
-     * @param \neokyuubi\PhantomJs\Procedure\ProcedureInterface $procedure
-     * @param \neokyuubi\PhantomJs\Procedure\InputInterface     $input
+     * @param \protocteur\PhantomJs\Procedure\ProcedureInterface $procedure
+     * @param \protocteur\PhantomJs\Procedure\InputInterface     $input
      */
     public function compile(ProcedureInterface $procedure, InputInterface $input);
 
