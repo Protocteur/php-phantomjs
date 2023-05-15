@@ -6,14 +6,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace neokyuubi\PhantomJs\Tests\Unit\Cache;
+namespace protocteur\PhantomJs\Tests\Unit\Cache;
 
-use neokyuubi\PhantomJs\Cache\FileCache;
+use protocteur\PhantomJs\Cache\FileCache;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class FileCacheTest extends \PHPUnit_Framework_TestCase
 {
@@ -74,7 +74,7 @@ class FileCacheTest extends \PHPUnit_Framework_TestCase
      */
     public function testNotWritableExceptionIsThrownIfFileCannotBeSavedDueToWritePermissions()
     {
-        $this->setExpectedException('\neokyuubi\PhantomJs\Exception\NotWritableException');
+        $this->setExpectedException('\protocteur\PhantomJs\Exception\NotWritableException');
 
         $fileCache = $this->getFileCache('/This/Directory/Is/Not/Writable/', 'txt');
         $fileCache->save($this->filename, 'Test');
@@ -122,7 +122,7 @@ class FileCacheTest extends \PHPUnit_Framework_TestCase
      */
     public function testNotWritableExceptionIsThrownIfDirectoryPathIsNotWritable()
     {
-        $this->setExpectedException('\neokyuubi\PhantomJs\Exception\NotWritableException');
+        $this->setExpectedException('\protocteur\PhantomJs\Exception\NotWritableException');
 
         $fileCache  = $this->getFileCache($this->directory, 'txt');
         $file       = $fileCache->save('/This/Directory/Is/Not/Writable/', 'Test');
@@ -156,7 +156,7 @@ class FileCacheTest extends \PHPUnit_Framework_TestCase
      */
     public function testNotExistsExceptionIsThrownIfWhenFetchingDataThatDoesntExist()
     {
-        $this->setExpectedException('\neokyuubi\PhantomJs\Exception\NotExistsException');
+        $this->setExpectedException('\protocteur\PhantomJs\Exception\NotExistsException');
 
         $fileCache = $this->getFileCache('', 'txt');
 
@@ -228,7 +228,7 @@ class FileCacheTest extends \PHPUnit_Framework_TestCase
      *
      * @param  string                            $directory
      * @param  string                            $extension
-     * @return \neokyuubi\PhantomJs\Cache\FileCache
+     * @return \protocteur\PhantomJs\Cache\FileCache
      */
     protected function getFileCache($directory, $extension)
     {

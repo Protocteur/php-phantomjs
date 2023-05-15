@@ -9,24 +9,24 @@
 namespace protocteur\PhantomJs\Procedure;
 
 use protocteur\PhantomJs\Engine;
-use neokyuubi\PhantomJs\Cache\CacheInterface;
-use neokyuubi\PhantomJs\Parser\ParserInterface;
-use neokyuubi\PhantomJs\Template\TemplateRendererInterface;
-use neokyuubi\PhantomJs\Exception\NotWritableException;
-use neokyuubi\PhantomJs\Exception\ProcedureFailedException;
-use neokyuubi\PhantomJs\StringUtils;
+use protocteur\PhantomJs\Cache\CacheInterface;
+use protocteur\PhantomJs\Parser\ParserInterface;
+use protocteur\PhantomJs\Template\TemplateRendererInterface;
+use protocteur\PhantomJs\Exception\NotWritableException;
+use protocteur\PhantomJs\Exception\ProcedureFailedException;
+use protocteur\PhantomJs\StringUtils;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class Procedure implements ProcedureInterface
 {
     /**
      * PhantomJS engine
      *
-     * @var \neokyuubi\PhantomJs\Engine
+     * @var \protocteur\PhantomJs\Engine
      * @access protected
      */
     protected $engine;
@@ -34,7 +34,7 @@ class Procedure implements ProcedureInterface
     /**
      * Parser instance.
      *
-     * @var \neokyuubi\PhantomJs\Parser\ParserInterface
+     * @var \protocteur\PhantomJs\Parser\ParserInterface
      * @access protected
      */
     protected $parser;
@@ -42,7 +42,7 @@ class Procedure implements ProcedureInterface
     /**
      * Cache handler instance.
      *
-     * @var \neokyuubi\PhantomJs\Cache\CacheInterface
+     * @var \protocteur\PhantomJs\Cache\CacheInterface
      * @access protected
      */
     protected $cacheHandler;
@@ -50,7 +50,7 @@ class Procedure implements ProcedureInterface
     /**
      * Template renderer.
      *
-     * @var \neokyuubi\PhantomJs\Template\TemplateRendererInterface
+     * @var \protocteur\PhantomJs\Template\TemplateRendererInterface
      * @access protected
      */
     protected $renderer;
@@ -67,10 +67,10 @@ class Procedure implements ProcedureInterface
      * Internal constructor.
      *
      * @access public
-     * @param \neokyuubi\PhantomJs\Engine                             $engine
-     * @param \neokyuubi\PhantomJs\Parser\ParserInterface             $parser
-     * @param \neokyuubi\PhantomJs\Cache\CacheInterface               $cacheHandler
-     * @param \neokyuubi\PhantomJs\Template\TemplateRendererInterface $renderer
+     * @param \protocteur\PhantomJs\Engine                             $engine
+     * @param \protocteur\PhantomJs\Parser\ParserInterface             $parser
+     * @param \protocteur\PhantomJs\Cache\CacheInterface               $cacheHandler
+     * @param \protocteur\PhantomJs\Template\TemplateRendererInterface $renderer
      */
     public function __construct(Engine $engine, ParserInterface $parser, CacheInterface $cacheHandler, TemplateRendererInterface $renderer)
     {
@@ -84,10 +84,10 @@ class Procedure implements ProcedureInterface
      * Run procedure.
      *
      * @access public
-     * @param  \neokyuubi\PhantomJs\Procedure\InputInterface           $input
-     * @param  \neokyuubi\PhantomJs\Procedure\OutputInterface          $output
-     * @throws \neokyuubi\PhantomJs\Exception\ProcedureFailedException
-     * @throws \neokyuubi\PhantomJs\Exception\NotWritableException
+     * @param  \protocteur\PhantomJs\Procedure\InputInterface           $input
+     * @param  \protocteur\PhantomJs\Procedure\OutputInterface          $output
+     * @throws \protocteur\PhantomJs\Exception\ProcedureFailedException
+     * @throws \protocteur\PhantomJs\Exception\NotWritableException
      * @return void
      */
     public function run(InputInterface $input, OutputInterface $output)
@@ -144,7 +144,7 @@ class Procedure implements ProcedureInterface
      *
      * @access public
      * @param  string                                $template
-     * @return \neokyuubi\PhantomJs\Procedure\Procedure
+     * @return \protocteur\PhantomJs\Procedure\Procedure
      */
     public function setTemplate($template)
     {
@@ -168,7 +168,7 @@ class Procedure implements ProcedureInterface
      * Compile procedure.
      *
      * @access public
-     * @param  \neokyuubi\PhantomJs\Procedure\InputInterface $input
+     * @param  \protocteur\PhantomJs\Procedure\InputInterface $input
      * @return void
      */
     public function compile(InputInterface $input)

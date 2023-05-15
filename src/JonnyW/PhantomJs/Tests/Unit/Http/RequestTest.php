@@ -6,15 +6,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace neokyuubi\PhantomJs\Tests\Unit\Http;
+namespace protocteur\PhantomJs\Tests\Unit\Http;
 
-use neokyuubi\PhantomJs\Http\Request;
-use neokyuubi\PhantomJs\Http\RequestInterface;
+use protocteur\PhantomJs\Http\Request;
+use protocteur\PhantomJs\Http\RequestInterface;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class RequestTest extends \PHPUnit_Framework_TestCase
 {
@@ -104,7 +104,7 @@ class RequestTest extends \PHPUnit_Framework_TestCase
      */
     public function testInvalidMethodIsThrownIfMethodIsInvalid()
     {
-        $this->setExpectedException('\neokyuubi\PhantomJs\Exception\InvalidMethodException');
+        $this->setExpectedException('\protocteur\PhantomJs\Exception\InvalidMethodException');
 
         $request = $this->getRequest();
         $request->setMethod('INVALID_METHOD');
@@ -556,7 +556,7 @@ class RequestTest extends \PHPUnit_Framework_TestCase
      * @param  string                         $url     (default: null)
      * @param  string                         $method  (default: RequestInterface::METHOD_GET)
      * @param  int                            $timeout (default: 5000)
-     * @return \neokyuubi\PhantomJs\Http\Request
+     * @return \protocteur\PhantomJs\Http\Request
      */
     protected function getRequest($url = null, $method = RequestInterface::METHOD_GET, $timeout = 5000)
     {

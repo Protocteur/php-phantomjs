@@ -42,7 +42,7 @@ class ProcedureLoaderFactory implements ProcedureLoaderFactoryInterface
      *
      * @access public
      * @param  string                                      $directory
-     * @return \neokyuubi\PhantomJs\Procedure\ProcedureLoader
+     * @return \protocteur\PhantomJs\Procedure\ProcedureLoader
      */
     public function createProcedureLoader($directory)
     {

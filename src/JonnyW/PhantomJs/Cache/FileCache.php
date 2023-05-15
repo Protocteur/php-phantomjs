@@ -6,16 +6,16 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace neokyuubi\PhantomJs\Cache;
+namespace protocteur\PhantomJs\Cache;
 
-use neokyuubi\PhantomJs\StringUtils;
-use neokyuubi\PhantomJs\Exception\NotWritableException;
-use neokyuubi\PhantomJs\Exception\NotExistsException;
+use protocteur\PhantomJs\StringUtils;
+use protocteur\PhantomJs\Exception\NotWritableException;
+use protocteur\PhantomJs\Exception\NotExistsException;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class FileCache implements CacheInterface
 {
@@ -55,7 +55,7 @@ class FileCache implements CacheInterface
      * @param  string                                           $id
      * @param  string                                           $data
      * @return string
-     * @throws \neokyuubi\PhantomJs\Exception\NotWritableException
+     * @throws \protocteur\PhantomJs\Exception\NotWritableException
      */
     public function save($id, $data)
     {
@@ -81,7 +81,7 @@ class FileCache implements CacheInterface
      * @access public
      * @param  string                                         $id
      * @return mixed|void
-     * @throws \neokyuubi\PhantomJs\Exception\NotExistsException
+     * @throws \protocteur\PhantomJs\Exception\NotExistsException
      */
     public function fetch($id)
     {
@@ -165,7 +165,7 @@ class FileCache implements CacheInterface
      * @access protected
      * @param  string                                           $id
      * @return string
-     * @throws \neokyuubi\PhantomJs\Exception\NotWritableException
+     * @throws \protocteur\PhantomJs\Exception\NotWritableException
      */
     protected function getFileName($id)
     {

@@ -6,19 +6,19 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace neokyuubi\PhantomJs\Http;
+namespace protocteur\PhantomJs\Http;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class MessageFactory implements MessageFactoryInterface
 {
     /**
      * Client instance
      *
-     * @var \neokyuubi\PhantomJs\Http\MessageFactory
+     * @var \protocteur\PhantomJs\Http\MessageFactory
      * @access private
      */
     private static $instance;
@@ -27,7 +27,7 @@ class MessageFactory implements MessageFactoryInterface
      * Get singleton instance.
      *
      * @access public
-     * @return \neokyuubi\PhantomJs\Http\MessageFactory
+     * @return \protocteur\PhantomJs\Http\MessageFactory
      */
     public static function getInstance()
     {
@@ -45,7 +45,7 @@ class MessageFactory implements MessageFactoryInterface
      * @param  string                         $url
      * @param  string                         $method
      * @param  int                            $timeout
-     * @return \neokyuubi\PhantomJs\Http\Request
+     * @return \protocteur\PhantomJs\Http\Request
      */
     public function createRequest($url = null, $method = RequestInterface::METHOD_GET, $timeout = 5000)
     {
@@ -59,7 +59,7 @@ class MessageFactory implements MessageFactoryInterface
      * @param  string                                $url
      * @param  string                                $method
      * @param  int                                   $timeout
-     * @return \neokyuubi\PhantomJs\Http\CaptureRequest
+     * @return \protocteur\PhantomJs\Http\CaptureRequest
      */
     public function createCaptureRequest($url = null, $method = RequestInterface::METHOD_GET, $timeout = 5000)
     {
@@ -73,7 +73,7 @@ class MessageFactory implements MessageFactoryInterface
      * @param  string                            $url
      * @param  string                            $method
      * @param  int                               $timeout
-     * @return \neokyuubi\PhantomJs\Http\PdfRequest
+     * @return \protocteur\PhantomJs\Http\PdfRequest
      */
     public function createPdfRequest($url = null, $method = RequestInterface::METHOD_GET, $timeout = 5000)
     {
@@ -84,7 +84,7 @@ class MessageFactory implements MessageFactoryInterface
      * Create response instance.
      *
      * @access public
-     * @return \neokyuubi\PhantomJs\Http\Response
+     * @return \protocteur\PhantomJs\Http\Response
      */
     public function createResponse()
     {

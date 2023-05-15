@@ -12,7 +12,7 @@ namespace protocteur\PhantomJs\Procedure;
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class Input implements InputInterface
 {
@@ -41,7 +41,7 @@ class Input implements InputInterface
      * @access public
      * @param  string                            $name
      * @param  mixed                             $value
-     * @return \neokyuubi\PhantomJs\Procedure\Input
+     * @return \protocteur\PhantomJs\Procedure\Input
      */
     public function set($name, $value)
     {

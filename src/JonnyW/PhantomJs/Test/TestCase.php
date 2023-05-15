@@ -6,14 +6,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace neokyuubi\PhantomJs\Test;
+namespace protocteur\PhantomJs\Test;
 
-use neokyuubi\PhantomJs\DependencyInjection\ServiceContainer;
+use protocteur\PhantomJs\DependencyInjection\ServiceContainer;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class TestCase extends \PHPUnit_Framework_TestCase
 {
@@ -21,7 +21,7 @@ class TestCase extends \PHPUnit_Framework_TestCase
      * Get dependency injection container.
      *
      * @access public
-     * @return \neokyuubi\PhantomJs\DependencyInjection\ServiceContainer
+     * @return \protocteur\PhantomJs\DependencyInjection\ServiceContainer
      */
     public function getContainer()
     {

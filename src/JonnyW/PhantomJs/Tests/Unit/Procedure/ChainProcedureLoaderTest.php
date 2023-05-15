@@ -6,14 +6,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace neokyuubi\PhantomJs\Tests\Unit\Procedure;
+namespace protocteur\PhantomJs\Tests\Unit\Procedure;
 
-use neokyuubi\PhantomJs\Procedure\ChainProcedureLoader;
+use protocteur\PhantomJs\Procedure\ChainProcedureLoader;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class ChainProcedureLoaderTest extends \PHPUnit_Framework_TestCase
 {
@@ -60,7 +60,7 @@ class ChainProcedureLoaderTest extends \PHPUnit_Framework_TestCase
 
         $chainProcedureLoader = $this->getChainProcedureLoader($procedureLoaders);
 
-        $this->assertInstanceOf('\neokyuubi\PhantomJs\Procedure\ProcedureInterface', $chainProcedureLoader->load('test'));
+        $this->assertInstanceOf('\protocteur\PhantomJs\Procedure\ProcedureInterface', $chainProcedureLoader->load('test'));
     }
 
     /**
@@ -132,7 +132,7 @@ class ChainProcedureLoaderTest extends \PHPUnit_Framework_TestCase
      *
      * @access protected
      * @param  array                                            $procedureLoaders
-     * @return \neokyuubi\PhantomJs\Procedure\ChainProcedureLoader
+     * @return \protocteur\PhantomJs\Procedure\ChainProcedureLoader
      */
     protected function getChainProcedureLoader(array $procedureLoaders)
     {
@@ -149,11 +149,11 @@ class ChainProcedureLoaderTest extends \PHPUnit_Framework_TestCase
      * Get procedure loader.
      *
      * @access protected
-     * @return \neokyuubi\PhantomJs\Procedure\ProcedureLoaderInterface
+     * @return \protocteur\PhantomJs\Procedure\ProcedureLoaderInterface
      */
     protected function getProcedureLoader()
     {
-        $procedureLoader = $this->getMock('\neokyuubi\PhantomJs\Procedure\ProcedureLoaderInterface');
+        $procedureLoader = $this->getMock('\protocteur\PhantomJs\Procedure\ProcedureLoaderInterface');
 
         return $procedureLoader;
     }
@@ -162,11 +162,11 @@ class ChainProcedureLoaderTest extends \PHPUnit_Framework_TestCase
      * Get procedure.
      *
      * @access protected
-     * @return \neokyuubi\PhantomJs\Procedure\ProcedureInterface
+     * @return \protocteur\PhantomJs\Procedure\ProcedureInterface
      */
     protected function getProcedure()
     {
-        $procedure = $this->getMock('\neokyuubi\PhantomJs\Procedure\ProcedureInterface');
+        $procedure = $this->getMock('\protocteur\PhantomJs\Procedure\ProcedureInterface');
 
         return $procedure;
     }

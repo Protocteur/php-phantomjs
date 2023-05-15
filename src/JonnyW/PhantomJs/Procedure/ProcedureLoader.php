@@ -38,7 +38,7 @@ class ProcedureLoader implements ProcedureLoaderInterface
      * Internal constructor.
      *
      * @access public
-     * @param \neokyuubi\PhantomJs\Procedure\ProcedureFactoryInterface $procedureFactory
+     * @param \protocteur\PhantomJs\Procedure\ProcedureFactoryInterface $procedureFactory
      * @param \Symfony\Component\Config\FileLocatorInterface        $locator
      */
     public function __construct(ProcedureFactoryInterface $procedureFactory, FileLocatorInterface $locator)
@@ -52,7 +52,7 @@ class ProcedureLoader implements ProcedureLoaderInterface
      *
      * @access public
      * @param  string                                         $id
-     * @return \neokyuubi\PhantomJs\Procedure\ProcedureInterface
+     * @return \protocteur\PhantomJs\Procedure\ProcedureInterface
      */
     public function load($id)
     {
@@ -86,7 +86,7 @@ class ProcedureLoader implements ProcedureLoaderInterface
      * @param  string                                         $file
      * @return string
      * @throws \InvalidArgumentException
-     * @throws \neokyuubi\PhantomJs\Exception\NotExistsException
+     * @throws \protocteur\PhantomJs\Exception\NotExistsException
      */
     protected function loadFile($file)
     {

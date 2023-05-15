@@ -30,7 +30,7 @@ class ProcedureValidator implements ProcedureValidatorInterface
     /**
      * Validator engine
      *
-     * @var \neokyuubi\PhantomJs\Validator\EngineInterface
+     * @var \protocteur\PhantomJs\Validator\EngineInterface
      * @access protected
      */
     protected $engine;
@@ -39,8 +39,8 @@ class ProcedureValidator implements ProcedureValidatorInterface
      * Internal constructor.
      *
      * @access public
-     * @param \neokyuubi\PhantomJs\Procedure\ProcedureLoaderInterface $procedureLoader
-     * @param \neokyuubi\PhantomJs\Validator\EngineInterface          $engine
+     * @param \protocteur\PhantomJs\Procedure\ProcedureLoaderInterface $procedureLoader
+     * @param \protocteur\PhantomJs\Validator\EngineInterface          $engine
      */
     public function __construct(ProcedureLoaderInterface $procedureLoader, EngineInterface $engine)
     {
@@ -54,7 +54,7 @@ class ProcedureValidator implements ProcedureValidatorInterface
      * @access public
      * @param  string                                                   $procedure
      * @return boolean
-     * @throws \neokyuubi\PhantomJs\Exception\ProcedureValidationException
+     * @throws \protocteur\PhantomJs\Exception\ProcedureValidationException
      */
     public function validate($procedure)
     {
@@ -70,7 +70,7 @@ class ProcedureValidator implements ProcedureValidatorInterface
      * @access protected
      * @param  string                                      $procedure
      * @return void
-     * @throws \neokyuubi\PhantomJs\Exception\SyntaxException
+     * @throws \protocteur\PhantomJs\Exception\SyntaxException
      */
     protected function validateSyntax($procedure)
     {
@@ -96,7 +96,7 @@ class ProcedureValidator implements ProcedureValidatorInterface
      * @access protected
      * @param  string                                           $procedure
      * @return void
-     * @throws \neokyuubi\PhantomJs\Exception\RequirementException
+     * @throws \protocteur\PhantomJs\Exception\RequirementException
      */
     protected function validateRequirements($procedure)
     {

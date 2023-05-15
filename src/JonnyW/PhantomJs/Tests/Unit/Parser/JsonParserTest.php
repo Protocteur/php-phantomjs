@@ -6,14 +6,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace neokyuubi\PhantomJs\Tests\Unit\Parser;
+namespace protocteur\PhantomJs\Tests\Unit\Parser;
 
-use neokyuubi\PhantomJs\Parser\JsonParser;
+use protocteur\PhantomJs\Parser\JsonParser;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class JsonParserTest extends \PHPUnit_Framework_TestCase
 {
@@ -198,7 +198,7 @@ class JsonParserTest extends \PHPUnit_Framework_TestCase
      * Get JSON parser instance.
      *
      * @access protected
-     * @return \neokyuubi\PhantomJs\Parser\JsonParser
+     * @return \protocteur\PhantomJs\Parser\JsonParser
      */
     protected function getJsonParser()
     {

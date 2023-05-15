@@ -6,14 +6,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace neokyuubi\PhantomJs\Http;
+namespace protocteur\PhantomJs\Http;
 
-use neokyuubi\PhantomJs\Procedure\OutputInterface;
+use protocteur\PhantomJs\Procedure\OutputInterface;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class Response
     implements ResponseInterface, OutputInterface
@@ -95,7 +95,7 @@ class Response
      *
      * @access public
      * @param  array                           $data
-     * @return \neokyuubi\PhantomJs\Http\Response
+     * @return \protocteur\PhantomJs\Http\Response
      */
     public function import(array $data)
     {
@@ -124,7 +124,7 @@ class Response
      *
      * @access protected
      * @param  array                           $headers
-     * @return \neokyuubi\PhantomJs\Http\Response
+     * @return \protocteur\PhantomJs\Http\Response
      */
     protected function setHeaders(array $headers)
     {

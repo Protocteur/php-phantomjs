@@ -6,14 +6,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace neokyuubi\PhantomJs;
+namespace protocteur\PhantomJs;
 
-use neokyuubi\PhantomJs\Exception\InvalidExecutableException;
+use protocteur\PhantomJs\Exception\InvalidExecutableException;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class Engine
 {
@@ -102,7 +102,7 @@ class Engine
      *
      * @access public
      * @param  string                   $path
-     * @return \neokyuubi\PhantomJs\Client
+     * @return \protocteur\PhantomJs\Client
      */
     public function setPath($path)
     {
@@ -129,7 +129,7 @@ class Engine
      *
      * @access public
      * @param  array                    $options
-     * @return \neokyuubi\PhantomJs\Client
+     * @return \protocteur\PhantomJs\Client
      */
     public function setOptions(array $options)
     {
@@ -154,7 +154,7 @@ class Engine
      *
      * @access public
      * @param  string                   $option
-     * @return \neokyuubi\PhantomJs\Client
+     * @return \protocteur\PhantomJs\Client
      */
     public function addOption($option)
     {
@@ -170,7 +170,7 @@ class Engine
      *
      * @access public
      * @param  boolean                  $doDebug
-     * @return \neokyuubi\PhantomJs\Client
+     * @return \protocteur\PhantomJs\Client
      */
     public function debug($doDebug)
     {
@@ -184,7 +184,7 @@ class Engine
      *
      * @access public
      * @param  boolean                  $doCache
-     * @return \neokyuubi\PhantomJs\Client
+     * @return \protocteur\PhantomJs\Client
      */
     public function cache($doCache)
     {
@@ -198,7 +198,7 @@ class Engine
      *
      * @access public
      * @param  string                   $info
-     * @return \neokyuubi\PhantomJs\Client
+     * @return \protocteur\PhantomJs\Client
      */
     public function log($info)
     {
@@ -222,7 +222,7 @@ class Engine
      * Clear log info.
      *
      * @access public
-     * @return \neokyuubi\PhantomJs\Client
+     * @return \protocteur\PhantomJs\Client
      */
     public function clearLog()
     {
@@ -237,7 +237,7 @@ class Engine
      * @access private
      * @param  string                                                 $file
      * @return boolean
-     * @throws \neokyuubi\PhantomJs\Exception\InvalidExecutableException
+     * @throws \protocteur\PhantomJs\Exception\InvalidExecutableException
      */
     private function validateExecutable($file)
     {

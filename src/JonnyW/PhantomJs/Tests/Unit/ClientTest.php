@@ -6,18 +6,18 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace neokyuubi\PhantomJs\Tests\Unit;
+namespace protocteur\PhantomJs\Tests\Unit;
 
-use neokyuubi\PhantomJs\Client;
-use neokyuubi\PhantomJs\Engine;
-use neokyuubi\PhantomJs\Http\MessageFactoryInterface;
-use neokyuubi\PhantomJs\Procedure\ProcedureLoaderInterface;
-use neokyuubi\PhantomJs\Procedure\ProcedureCompilerInterface;
+use protocteur\PhantomJs\Client;
+use protocteur\PhantomJs\Engine;
+use protocteur\PhantomJs\Http\MessageFactoryInterface;
+use protocteur\PhantomJs\Procedure\ProcedureLoaderInterface;
+use protocteur\PhantomJs\Procedure\ProcedureCompilerInterface;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class ClientTest extends \PHPUnit_Framework_TestCase
 {
@@ -35,7 +35,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
      */
     public function testCanGetClientThroughFactoryMethod()
     {
-        $this->assertInstanceOf('\neokyuubi\PhantomJs\Client', Client::getInstance());
+        $this->assertInstanceOf('\protocteur\PhantomJs\Client', Client::getInstance());
     }
 
     /**
@@ -52,7 +52,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
 
         $client = $this->getClient($engine, $procedureLoader, $procedureCompiler, $messageFactory);
 
-        $this->assertInstanceOf('\neokyuubi\PhantomJs\Engine', $client->getEngine());
+        $this->assertInstanceOf('\protocteur\PhantomJs\Engine', $client->getEngine());
     }
 
     /**
@@ -69,7 +69,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
 
         $client = $this->getClient($engine, $procedureLoader, $procedureCompiler, $messageFactory);
 
-        $this->assertInstanceOf('\neokyuubi\PhantomJs\Http\MessageFactoryInterface', $client->getMessageFactory());
+        $this->assertInstanceOf('\protocteur\PhantomJs\Http\MessageFactoryInterface', $client->getMessageFactory());
     }
 
     /**
@@ -86,7 +86,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
 
         $client = $this->getClient($engine, $procedureLoader, $procedureCompiler, $messageFactory);
 
-        $this->assertInstanceOf('\neokyuubi\PhantomJs\Procedure\ProcedureLoaderInterface', $client->getProcedureLoader());
+        $this->assertInstanceOf('\protocteur\PhantomJs\Procedure\ProcedureLoaderInterface', $client->getProcedureLoader());
     }
 
 /** +++++++++++++++++++++++++++++++++++ **/
@@ -96,11 +96,11 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     /**
      * Get client instance
      *
-     * @param  \neokyuubi\PhantomJs\Engine                               $engine
-     * @param  \neokyuubi\PhantomJs\Procedure\ProcedureLoaderInterface   $procedureLoader
-     * @param  \neokyuubi\PhantomJs\Procedure\ProcedureCompilerInterface $procedureCompiler
-     * @param  \neokyuubi\PhantomJs\Http\MessageFactoryInterface         $messageFactory
-     * @return \neokyuubi\PhantomJs\Client
+     * @param  \protocteur\PhantomJs\Engine                               $engine
+     * @param  \protocteur\PhantomJs\Procedure\ProcedureLoaderInterface   $procedureLoader
+     * @param  \protocteur\PhantomJs\Procedure\ProcedureCompilerInterface $procedureCompiler
+     * @param  \protocteur\PhantomJs\Http\MessageFactoryInterface         $messageFactory
+     * @return \protocteur\PhantomJs\Client
      */
     protected function getClient(Engine $engine, ProcedureLoaderInterface $procedureLoader, ProcedureCompilerInterface $procedureCompiler, MessageFactoryInterface $messageFactory)
     {
@@ -117,11 +117,11 @@ class ClientTest extends \PHPUnit_Framework_TestCase
      * Get engine
      *
      * @access protected
-     * @return \neokyuubi\PhantomJs\Engine
+     * @return \protocteur\PhantomJs\Engine
      */
     protected function getEngine()
     {
-        $engine = $this->getMock('\neokyuubi\PhantomJs\Engine');
+        $engine = $this->getMock('\protocteur\PhantomJs\Engine');
 
         return $engine;
     }
@@ -130,11 +130,11 @@ class ClientTest extends \PHPUnit_Framework_TestCase
      * Get message factory
      *
      * @access protected
-     * @return \neokyuubi\PhantomJs\Http\MessageFactoryInterface
+     * @return \protocteur\PhantomJs\Http\MessageFactoryInterface
      */
     protected function getMessageFactory()
     {
-        $messageFactory = $this->getMock('\neokyuubi\PhantomJs\Http\MessageFactoryInterface');
+        $messageFactory = $this->getMock('\protocteur\PhantomJs\Http\MessageFactoryInterface');
 
         return $messageFactory;
     }
@@ -143,11 +143,11 @@ class ClientTest extends \PHPUnit_Framework_TestCase
      * Get procedure loader.
      *
      * @access protected
-     * @return \neokyuubi\PhantomJs\Procedure\ProcedureLoaderInterface
+     * @return \protocteur\PhantomJs\Procedure\ProcedureLoaderInterface
      */
     protected function getProcedureLoader()
     {
-        $procedureLoader = $this->getMock('\neokyuubi\PhantomJs\Procedure\ProcedureLoaderInterface');
+        $procedureLoader = $this->getMock('\protocteur\PhantomJs\Procedure\ProcedureLoaderInterface');
 
         return $procedureLoader;
     }
@@ -156,11 +156,11 @@ class ClientTest extends \PHPUnit_Framework_TestCase
      * Get procedure validator.
      *
      * @access protected
-     * @return \neokyuubi\PhantomJs\Procedure\ProcedureCompilerInterface
+     * @return \protocteur\PhantomJs\Procedure\ProcedureCompilerInterface
      */
     protected function getProcedureCompiler()
     {
-        $procedureCompiler = $this->getMock('\neokyuubi\PhantomJs\Procedure\ProcedureCompilerInterface');
+        $procedureCompiler = $this->getMock('\protocteur\PhantomJs\Procedure\ProcedureCompilerInterface');
 
         return $procedureCompiler;
     }

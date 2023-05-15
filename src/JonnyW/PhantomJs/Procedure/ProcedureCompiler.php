@@ -46,7 +46,7 @@ class ProcedureCompiler implements ProcedureCompilerInterface
     /**
      * Renderer
      *
-     * @var \neokyuubi\PhantomJs\Template\TemplateRendererInterface
+     * @var \protocteur\PhantomJs\Template\TemplateRendererInterface
      * @access protected
      */
     protected $renderer;
@@ -63,10 +63,10 @@ class ProcedureCompiler implements ProcedureCompilerInterface
      * Internal constructor
      *
      * @access public
-     * @param \neokyuubi\PhantomJs\Procedure\ProcedureLoaderInterface    $procedureLoader
-     * @param \neokyuubi\PhantomJs\Procedure\ProcedureValidatorInterface $procedureValidator
-     * @param \neokyuubi\PhantomJs\Cache\CacheInterface                  $cacheHandler
-     * @param \neokyuubi\PhantomJs\Template\TemplateRendererInterface    $renderer
+     * @param \protocteur\PhantomJs\Procedure\ProcedureLoaderInterface    $procedureLoader
+     * @param \protocteur\PhantomJs\Procedure\ProcedureValidatorInterface $procedureValidator
+     * @param \protocteur\PhantomJs\Cache\CacheInterface                  $cacheHandler
+     * @param \protocteur\PhantomJs\Template\TemplateRendererInterface    $renderer
      */
     public function __construct(ProcedureLoaderInterface $procedureLoader, ProcedureValidatorInterface $procedureValidator,
         CacheInterface $cacheHandler, TemplateRendererInterface $renderer)
@@ -82,8 +82,8 @@ class ProcedureCompiler implements ProcedureCompilerInterface
      * Compile partials into procedure.
      *
      * @access public
-     * @param  \neokyuubi\PhantomJs\Procedure\ProcedureInterface $procedure
-     * @param  \neokyuubi\PhantomJs\Procedure\InputInterface     $input
+     * @param  \protocteur\PhantomJs\Procedure\ProcedureInterface $procedure
+     * @param  \protocteur\PhantomJs\Procedure\InputInterface     $input
      * @return void
      */
     public function compile(ProcedureInterface $procedure, InputInterface $input)

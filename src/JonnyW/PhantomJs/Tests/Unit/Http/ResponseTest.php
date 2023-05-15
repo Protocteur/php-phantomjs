@@ -6,14 +6,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace neokyuubi\PhantomJs\Tests\Unit\Http;
+namespace protocteur\PhantomJs\Tests\Unit\Http;
 
-use neokyuubi\PhantomJs\Http\Response;
+use protocteur\PhantomJs\Http\Response;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class ResponseTest extends \PHPUnit_Framework_TestCase
 {
@@ -376,7 +376,7 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
      */
     public function testCookiesCanBeImported()
     {
-        $cookie = 'cookie=TESTING; HttpOnly; expires=Mon, 16-Nov-2020 00:00:00 GMT; domain=.neokyuubi.kiwi; path=/';
+        $cookie = 'cookie=TESTING; HttpOnly; expires=Mon, 16-Nov-2020 00:00:00 GMT; domain=.protocteur.kiwi; path=/';
         $data = array(
             'cookies' => array($cookie)
         );
@@ -395,7 +395,7 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
      * Get response instance.
      *
      * @access protected
-     * @return \neokyuubi\PhantomJs\Http\Response
+     * @return \protocteur\PhantomJs\Http\Response
      */
     protected function getResponse()
     {

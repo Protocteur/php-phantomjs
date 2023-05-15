@@ -6,15 +6,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace neokyuubi\PhantomJs\Tests\Unit\Http;
+namespace protocteur\PhantomJs\Tests\Unit\Http;
 
-use neokyuubi\PhantomJs\Http\CaptureRequest;
-use neokyuubi\PhantomJs\Http\RequestInterface;
+use protocteur\PhantomJs\Http\CaptureRequest;
+use protocteur\PhantomJs\Http\RequestInterface;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class CaptureRequestTest extends \PHPUnit_Framework_TestCase
 {
@@ -104,7 +104,7 @@ class CaptureRequestTest extends \PHPUnit_Framework_TestCase
      */
     public function testInvalidMethodIsThrownIfMethodIsInvalid()
     {
-        $this->setExpectedException('\neokyuubi\PhantomJs\Exception\InvalidMethodException');
+        $this->setExpectedException('\protocteur\PhantomJs\Exception\InvalidMethodException');
 
         $captureRequest = $this->getCaptureRequest();
         $captureRequest->setMethod('INVALID_METHOD');
@@ -473,7 +473,7 @@ class CaptureRequestTest extends \PHPUnit_Framework_TestCase
      */
     public function testNotWritableExceptonIsThrownIfOutputPathIsNotWritable()
     {
-        $this->setExpectedException('\neokyuubi\PhantomJs\Exception\NotWritableException');
+        $this->setExpectedException('\protocteur\PhantomJs\Exception\NotWritableException');
 
         $invalidPath = '/invalid/path';
 
@@ -542,7 +542,7 @@ class CaptureRequestTest extends \PHPUnit_Framework_TestCase
      * @param  string                                $url     (default: null)
      * @param  string                                $method  (default: RequestInterface::METHOD_GET)
      * @param  int                                   $timeout (default: 5000)
-     * @return \neokyuubi\PhantomJs\Http\CaptureRequest
+     * @return \protocteur\PhantomJs\Http\CaptureRequest
      */
     protected function getCaptureRequest($url = null, $method = RequestInterface::METHOD_GET, $timeout = 5000)
     {

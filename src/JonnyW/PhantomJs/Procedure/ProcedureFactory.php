@@ -74,7 +74,7 @@ class ProcedureFactory implements ProcedureFactoryInterface
      * Create new procedure instance.
      *
      * @access public
-     * @return \neokyuubi\PhantomJs\Procedure\Procedure
+     * @return \protocteur\PhantomJs\Procedure\Procedure
      */
     public function createProcedure()
     {

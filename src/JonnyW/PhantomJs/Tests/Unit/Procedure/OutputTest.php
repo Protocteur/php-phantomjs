@@ -6,14 +6,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace neokyuubi\PhantomJs\Tests\Unit\Procedure;
+namespace protocteur\PhantomJs\Tests\Unit\Procedure;
 
-use neokyuubi\PhantomJs\Procedure\Output;
+use protocteur\PhantomJs\Procedure\Output;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class OutputTest extends \PHPUnit_Framework_TestCase
 {
@@ -77,7 +77,7 @@ class OutputTest extends \PHPUnit_Framework_TestCase
      * Get output.
      *
      * @access protected
-     * @return \neokyuubi\PhantomJs\Procedure\Output
+     * @return \protocteur\PhantomJs\Procedure\Output
      */
     protected function getOutput()
     {

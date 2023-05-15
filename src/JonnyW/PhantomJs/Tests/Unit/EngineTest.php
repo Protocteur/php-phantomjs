@@ -6,14 +6,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace neokyuubi\PhantomJs\Tests\Unit;
+namespace protocteur\PhantomJs\Tests\Unit;
 
-use neokyuubi\PhantomJs\Engine;
+use protocteur\PhantomJs\Engine;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class EngineTest extends \PHPUnit_Framework_TestCase
 {
@@ -31,7 +31,7 @@ class EngineTest extends \PHPUnit_Framework_TestCase
      */
     public function testInvalidExecutableExceptionIsThrownIfPhantomJSPathIsInvalid()
     {
-        $this->setExpectedException('\neokyuubi\PhantomJs\Exception\InvalidExecutableException');
+        $this->setExpectedException('\protocteur\PhantomJs\Exception\InvalidExecutableException');
 
         $engine = $this->getEngine();
         $engine->setPath('/invalid/phantomjs/path');
@@ -115,7 +115,7 @@ class EngineTest extends \PHPUnit_Framework_TestCase
      */
     public function testInvalidExecutableExceptionIsThrownWhenBuildingCommandIfPathToPhantomJSIsInvalid()
     {
-        $this->setExpectedException('\neokyuubi\PhantomJs\Exception\InvalidExecutableException');
+        $this->setExpectedException('\protocteur\PhantomJs\Exception\InvalidExecutableException');
 
         $engine = $this->getEngine();
 
@@ -249,7 +249,7 @@ class EngineTest extends \PHPUnit_Framework_TestCase
     /**
      * Get client instance
      *
-     * @return \neokyuubi\PhantomJs\Engine
+     * @return \protocteur\PhantomJs\Engine
      */
     protected function getEngine()
     {

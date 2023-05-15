@@ -6,26 +6,26 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace neokyuubi\PhantomJs\Tests\Unit\Procedure;
+namespace protocteur\PhantomJs\Tests\Unit\Procedure;
 
 use Twig_Environment;
 use Twig_Loader_String;
 use Symfony\Component\Config\FileLocatorInterface;
-use neokyuubi\PhantomJs\Engine;
-use neokyuubi\PhantomJs\Cache\FileCache;
-use neokyuubi\PhantomJs\Cache\CacheInterface;
-use neokyuubi\PhantomJs\Parser\JsonParser;
-use neokyuubi\PhantomJs\Parser\ParserInterface;
-use neokyuubi\PhantomJs\Template\TemplateRenderer;
-use neokyuubi\PhantomJs\Template\TemplateRendererInterface;
-use neokyuubi\PhantomJs\Procedure\ProcedureFactory;
-use neokyuubi\PhantomJs\Procedure\ProcedureFactoryInterface;
-use neokyuubi\PhantomJs\Procedure\ProcedureLoader;
+use protocteur\PhantomJs\Engine;
+use protocteur\PhantomJs\Cache\FileCache;
+use protocteur\PhantomJs\Cache\CacheInterface;
+use protocteur\PhantomJs\Parser\JsonParser;
+use protocteur\PhantomJs\Parser\ParserInterface;
+use protocteur\PhantomJs\Template\TemplateRenderer;
+use protocteur\PhantomJs\Template\TemplateRendererInterface;
+use protocteur\PhantomJs\Procedure\ProcedureFactory;
+use protocteur\PhantomJs\Procedure\ProcedureFactoryInterface;
+use protocteur\PhantomJs\Procedure\ProcedureLoader;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class ProcedureLoaderTest extends \PHPUnit_Framework_TestCase
 {
@@ -79,7 +79,7 @@ class ProcedureLoaderTest extends \PHPUnit_Framework_TestCase
      */
     public function testNotExistsExceptionIsThrownIfProcedureFileDoesNotExist()
     {
-        $this->setExpectedException('\neokyuubi\PhantomJs\Exception\NotExistsException');
+        $this->setExpectedException('\protocteur\PhantomJs\Exception\NotExistsException');
 
         $procedureFactory = $this->getProcedureFactory();
         $fileLocator      = $this->getFileLocator();
@@ -110,7 +110,7 @@ class ProcedureLoaderTest extends \PHPUnit_Framework_TestCase
 
         $procedureLoader = $this->getProcedureLoader($procedureFactory, $fileLocator);
 
-        $this->assertInstanceOf('\neokyuubi\PhantomJs\Procedure\ProcedureInterface', $procedureLoader->load('test'));
+        $this->assertInstanceOf('\protocteur\PhantomJs\Procedure\ProcedureInterface', $procedureLoader->load('test'));
     }
 
     /**
@@ -166,9 +166,9 @@ class ProcedureLoaderTest extends \PHPUnit_Framework_TestCase
      * Get procedure loader instance.
      *
      * @access public
-     * @param  \neokyuubi\PhantomJs\Procedure\ProcedureFactoryInterface $procedureFactory
+     * @param  \protocteur\PhantomJs\Procedure\ProcedureFactoryInterface $procedureFactory
      * @param  \Symfony\Component\Config\FileLocatorInterface        $locator
-     * @return \neokyuubi\PhantomJs\Procedure\ProcedureLoader
+     * @return \protocteur\PhantomJs\Procedure\ProcedureLoader
      */
     protected function getProcedureLoader(ProcedureFactoryInterface $procedureFactory, FileLocatorInterface $locator)
     {
@@ -181,10 +181,10 @@ class ProcedureLoaderTest extends \PHPUnit_Framework_TestCase
      * Get procedure factory instance.
      *
      * @access protected
-     * @param  \neokyuubi\PhantomJs\Parser\ParserInterface             $parser
-     * @param  \neokyuubi\PhantomJs\Cache\CacheInterface               $cacheHandler
-     * @param  \neokyuubi\PhantomJs\Template\TemplateRendererInterface $renderer
-     * @return \neokyuubi\PhantomJs\Procedure\ProcedureFactory
+     * @param  \protocteur\PhantomJs\Parser\ParserInterface             $parser
+     * @param  \protocteur\PhantomJs\Cache\CacheInterface               $cacheHandler
+     * @param  \protocteur\PhantomJs\Template\TemplateRendererInterface $renderer
+     * @return \protocteur\PhantomJs\Procedure\ProcedureFactory
      */
     protected function getProcedureFactory()
     {
@@ -202,7 +202,7 @@ class ProcedureLoaderTest extends \PHPUnit_Framework_TestCase
      * Get engine.
      *
      * @access protected
-     * @return \neokyuubi\PhantomJs\Engine
+     * @return \protocteur\PhantomJs\Engine
      */
     protected function getEngine()
     {
@@ -215,7 +215,7 @@ class ProcedureLoaderTest extends \PHPUnit_Framework_TestCase
      * Get parser.
      *
      * @access protected
-     * @return \neokyuubi\PhantomJs\Parser\JsonParser
+     * @return \protocteur\PhantomJs\Parser\JsonParser
      */
     protected function getParser()
     {
@@ -230,7 +230,7 @@ class ProcedureLoaderTest extends \PHPUnit_Framework_TestCase
      * @access protected
      * @param  string                            $cacheDir  (default: '')
      * @param  string                            $extension (default: 'proc')
-     * @return \neokyuubi\PhantomJs\Cache\FileCache
+     * @return \protocteur\PhantomJs\Cache\FileCache
      */
     protected function getCache($cacheDir = '', $extension = 'proc')
     {
@@ -243,7 +243,7 @@ class ProcedureLoaderTest extends \PHPUnit_Framework_TestCase
      * Get template renderer.
      *
      * @access protected
-     * @return \neokyuubi\PhantomJs\Template\TemplateRenderer
+     * @return \protocteur\PhantomJs\Template\TemplateRenderer
      */
     protected function getRenderer()
     {

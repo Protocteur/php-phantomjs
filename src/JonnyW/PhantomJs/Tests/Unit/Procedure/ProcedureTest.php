@@ -6,25 +6,25 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace neokyuubi\PhantomJs\Tests\Unit\Procedure;
+namespace protocteur\PhantomJs\Tests\Unit\Procedure;
 
 use Twig_Environment;
 use Twig_Loader_String;
-use neokyuubi\PhantomJs\Engine;
-use neokyuubi\PhantomJs\Cache\FileCache;
-use neokyuubi\PhantomJs\Cache\CacheInterface;
-use neokyuubi\PhantomJs\Parser\JsonParser;
-use neokyuubi\PhantomJs\Parser\ParserInterface;
-use neokyuubi\PhantomJs\Template\TemplateRenderer;
-use neokyuubi\PhantomJs\Template\TemplateRendererInterface;
-use neokyuubi\PhantomJs\Procedure\Input;
-use neokyuubi\PhantomJs\Procedure\Output;
-use neokyuubi\PhantomJs\Procedure\Procedure;
+use protocteur\PhantomJs\Engine;
+use protocteur\PhantomJs\Cache\FileCache;
+use protocteur\PhantomJs\Cache\CacheInterface;
+use protocteur\PhantomJs\Parser\JsonParser;
+use protocteur\PhantomJs\Parser\ParserInterface;
+use protocteur\PhantomJs\Template\TemplateRenderer;
+use protocteur\PhantomJs\Template\TemplateRendererInterface;
+use protocteur\PhantomJs\Procedure\Input;
+use protocteur\PhantomJs\Procedure\Output;
+use protocteur\PhantomJs\Procedure\Procedure;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class ProcedureTest extends \PHPUnit_Framework_TestCase
 {
@@ -88,7 +88,7 @@ class ProcedureTest extends \PHPUnit_Framework_TestCase
      */
     public function testNotWritableExceptionIsThrownIfProcedureScriptCannotBeWrittenToFile()
     {
-        $this->setExpectedException('\neokyuubi\PhantomJs\Exception\NotWritableException');
+        $this->setExpectedException('\protocteur\PhantomJs\Exception\NotWritableException');
 
         $engne    = $this->getEngine();
         $parser   = $this->getParser();
@@ -112,7 +112,7 @@ class ProcedureTest extends \PHPUnit_Framework_TestCase
      */
     public function testProcedureFailedExceptionIsThrownIfProcedureCannotBeRun()
     {
-        $this->setExpectedException('\neokyuubi\PhantomJs\Exception\ProcedureFailedException');
+        $this->setExpectedException('\protocteur\PhantomJs\Exception\ProcedureFailedException');
 
         $parser   = $this->getParser();
         $cache    = $this->getCache();
@@ -136,11 +136,11 @@ class ProcedureTest extends \PHPUnit_Framework_TestCase
      * Get procedure instance.
      *
      * @access protected
-     * @param  \neokyuubi\PhantomJs\Engine                             $engine
-     * @param  \neokyuubi\PhantomJs\Parser\ParserInterface             $parser
-     * @param  \neokyuubi\PhantomJs\Cache\CacheInterface               $cacheHandler
-     * @param  \neokyuubi\PhantomJs\Template\TemplateRendererInterface $renderer
-     * @return \neokyuubi\PhantomJs\Procedure\Procedure
+     * @param  \protocteur\PhantomJs\Engine                             $engine
+     * @param  \protocteur\PhantomJs\Parser\ParserInterface             $parser
+     * @param  \protocteur\PhantomJs\Cache\CacheInterface               $cacheHandler
+     * @param  \protocteur\PhantomJs\Template\TemplateRendererInterface $renderer
+     * @return \protocteur\PhantomJs\Procedure\Procedure
      */
     protected function getProcedure(Engine $engine, ParserInterface $parser, CacheInterface $cacheHandler, TemplateRendererInterface $renderer)
     {
@@ -153,7 +153,7 @@ class ProcedureTest extends \PHPUnit_Framework_TestCase
      * Get parser.
      *
      * @access protected
-     * @return \neokyuubi\PhantomJs\Parser\JsonParser
+     * @return \protocteur\PhantomJs\Parser\JsonParser
      */
     protected function getParser()
     {
@@ -168,7 +168,7 @@ class ProcedureTest extends \PHPUnit_Framework_TestCase
      * @access protected
      * @param  string                            $cacheDir  (default: '')
      * @param  string                            $extension (default: 'proc')
-     * @return \neokyuubi\PhantomJs\Cache\FileCache
+     * @return \protocteur\PhantomJs\Cache\FileCache
      */
     protected function getCache($cacheDir = '', $extension = 'proc')
     {
@@ -181,7 +181,7 @@ class ProcedureTest extends \PHPUnit_Framework_TestCase
      * Get template renderer.
      *
      * @access protected
-     * @return \neokyuubi\PhantomJs\Template\TemplateRenderer
+     * @return \protocteur\PhantomJs\Template\TemplateRenderer
      */
     protected function getRenderer()
     {
@@ -198,7 +198,7 @@ class ProcedureTest extends \PHPUnit_Framework_TestCase
      * Get input
      *
      * @access protected
-     * @return \neokyuubi\PhantomJs\Procedure\Input
+     * @return \protocteur\PhantomJs\Procedure\Input
      */
     protected function getInput()
     {
@@ -211,7 +211,7 @@ class ProcedureTest extends \PHPUnit_Framework_TestCase
      * Get output.
      *
      * @access protected
-     * @return \neokyuubi\PhantomJs\Procedure\Output
+     * @return \protocteur\PhantomJs\Procedure\Output
      */
     protected function getOutput()
     {
@@ -228,11 +228,11 @@ class ProcedureTest extends \PHPUnit_Framework_TestCase
      * Get engine
      *
      * @access protected
-     * @return \neokyuubi\PhantomJs\Engine
+     * @return \protocteur\PhantomJs\Engine
      */
     protected function getEngine()
     {
-        $engine = $this->getMock('\neokyuubi\PhantomJs\Engine');
+        $engine = $this->getMock('\protocteur\PhantomJs\Engine');
 
         return $engine;
     }

@@ -6,17 +6,17 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace neokyuubi\PhantomJs\Tests\Unit\Template;
+namespace protocteur\PhantomJs\Tests\Unit\Template;
 
 use Twig_Environment;
 use Twig_Loader_String;
-use neokyuubi\PhantomJs\Http\Request;
-use neokyuubi\PhantomJs\Template\TemplateRenderer;
+use protocteur\PhantomJs\Http\Request;
+use protocteur\PhantomJs\Template\TemplateRenderer;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class TemplateRendererTest extends \PHPUnit_Framework_TestCase
 {
@@ -107,7 +107,7 @@ class TemplateRendererTest extends \PHPUnit_Framework_TestCase
     /**
      * Get template renderer instance.
      *
-     * @return \neokyuubi\PhantomJs\Message\TemplateRenderer
+     * @return \protocteur\PhantomJs\Message\TemplateRenderer
      */
     protected function getTemplateRenderer()
     {
@@ -122,7 +122,7 @@ class TemplateRendererTest extends \PHPUnit_Framework_TestCase
      * Get request
      *
      * @access protected
-     * @return \neokyuubi\PhantomJs\Http\Request
+     * @return \protocteur\PhantomJs\Http\Request
      */
     protected function getRequest()
     {

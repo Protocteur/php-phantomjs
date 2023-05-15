@@ -7,12 +7,12 @@
  * file that was distributed with this source code.
  */
 
-namespace neokyuubi\PhantomJs\Http;
+namespace protocteur\PhantomJs\Http;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 interface ResponseInterface
 {

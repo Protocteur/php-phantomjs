@@ -11,7 +11,7 @@ namespace protocteur\PhantomJs\Exception;
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class InvalidMethodException extends PhantomJsException
 {

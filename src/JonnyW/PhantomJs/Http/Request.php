@@ -7,12 +7,12 @@
  * file that was distributed with this source code.
  */
 
-namespace neokyuubi\PhantomJs\Http;
+namespace protocteur\PhantomJs\Http;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@neokyuubi.me>
+ * @author Jon Wenmoth <contact@protocteur.me>
  */
 class Request extends AbstractRequest
 {
@@ -44,7 +44,7 @@ class Request extends AbstractRequest
      *
      * @access public
      * @param  string                                 $type
-     * @return \neokyuubi\PhantomJs\Http\AbstractRequest
+     * @return \protocteur\PhantomJs\Http\AbstractRequest
      */
     public function setType($type)
     {
