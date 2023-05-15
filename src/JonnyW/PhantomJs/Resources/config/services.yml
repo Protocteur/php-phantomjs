@@ -127,15 +127,15 @@ services:
 
     phantomjs.twig.environment:
         class: "%phantomjs.twig.environment.class%"
-        arguments:
-            - "@phantomjs.twig.array_loader"
+#        arguments:
+#            - "@phantomjs.twig.array_loader"
         public: false
 
-    phantomjs.twig.array_loader:
-        class: "%phantomjs.twig.array_loader.class%"
-        arguments:
-            - []
-        public: false
+#    phantomjs.twig.array_loader:
+#        class: "%phantomjs.twig.array_loader.class%"
+#        arguments:
+#            - []
+#        public: false
 
     phantomjs.procedure.template_renderer:
         class: "%phantomjs.template.template_renderer.class%"
@@ -145,8 +145,8 @@ services:
 
     phantomjs.procedure.twig.environment:
         class: "%phantomjs.twig.environment.class%"
-        arguments:
-            - "@phantomjs.twig.array_loader"
+#        arguments:
+#            - "@phantomjs.twig.array_loader"
         public: false
         calls:
             - [ "setLexer", [ "@phantomjs.procedure.twig.lexer" ] ]
